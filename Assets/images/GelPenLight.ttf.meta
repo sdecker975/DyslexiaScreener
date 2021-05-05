@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 7336ca8842270ef4e9f4543abcf1a4bf
+timeCreated: 1506099237
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: GelPenLight
+  fontNames:
+  - GelPenLight
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

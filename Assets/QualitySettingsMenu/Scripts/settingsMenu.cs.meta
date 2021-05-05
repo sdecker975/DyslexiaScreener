@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 4798da0e445961c418797880f82b49f3
+labels:
+- Resolution
+- Quality
+- Menu
+- Ini
+- Settings
+- AA
+- Options
+timeCreated: 1427540741
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
