@@ -39,14 +39,15 @@ public class SQLHandler : MonoBehaviour {
         try
         {
             conn.Open();
-            print("Connected");
+            Debug.Log("Connected");
             state = true;
         }
         catch (System.Exception ex)
         {
             //probably should have a pop up come up if this fails so they know
-            print("failed");
+            Debug.Log("failed to connect to AWS server.");
             state = false;
+            InternetAvailable.internetAvailableStatic = false;
         }
     }
 
@@ -145,17 +146,33 @@ public class SQLHandler : MonoBehaviour {
 
     public static void InsertTest()
     {
-        string command = "insert into university.student_test_info (test_num, student_id, date_of_testing, test_type, result) values (" + Settings.testID + ", '" + Settings.studentID + "', '" + System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd HH:mm:ss") + "', '" + Camera.main.GetComponent<TestHandler>().testAbbrev + "'," + "9)";
-        print(command);
-        RunCommand(command);
+        if (InternetAvailable.internetAvailableStatic)
+        {
+            string command = "insert into university.student_test_info (test_num, student_id, date_of_testing, test_type, result) values (" + Settings.testID + ", '" + Settings.studentID + "', '" + System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd HH:mm:ss") + "', '" + Camera.main.GetComponent<TestHandler>().testAbbrev + "'," + "9)";
+            print(command);
+            RunCommand(command);
+        }
+        
     }
 
     public static void UpdateTest(int code)
     {
-        //string command = "update CARE1.student_test_info set " + Camera.main.GetComponent<TestHandler>().testAbbrev + " = " + code + " where test_num = " + Settings.testID;
-        string command = "update university.student_test_info set result = " + code + " where test_num = " + Settings.testID + " and test_type = '" + Camera.main.GetComponent<TestHandler>().testAbbrev + "'";
-        print(command);
-        RunCommand(command);
+        if (InternetAvailable.internetAvailableStatic)
+        {
+
+            // TODO: add if statement to check if camera has the component TestHandler, if it does execute otherwise do nothing
+            //string command = "update CARE1.student_test_info set " + Camera.main.GetComponent<TestHandler>().testAbbrev + " = " + code + " where test_num = " + Settings.testID;
+            if (Camera.main.GetComponent<TestHandler>() != null)
+            {
+                string command = "update university.student_test_info set result = " + code + " where test_num = " + Settings.testID + " and test_type = '" + Camera.main.GetComponent<TestHandler>().testAbbrev + "'";
+                print(command);
+                RunCommand(command);
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 
     public static void SaveReports()

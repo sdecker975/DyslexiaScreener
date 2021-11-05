@@ -24,9 +24,16 @@ public class Quit : MonoBehaviour {
             if (SceneManager.GetActiveScene().name.Equals("Menu") || SceneManager.GetActiveScene().name.Equals("Login") || SceneManager.GetActiveScene().name.Equals("Settings"))
             {
                 //CheckQuit.canQuit = true;
-                //Application.Quit();
-                SceneManager.LoadScene("quit");
+                Debug.Log("quit");
+                CheckQuit.canQuit = true;
+                System.Diagnostics.Process.GetCurrentProcess().Kill();
+                Application.Quit();
+                //SceneManager.LoadScene("quit");
             }
+            else
+            {
+                SceneManager.LoadScene("Menu");
+            
 
             //this shouldn't be a permanent fix
             OutputHandler.timer.Reset();
@@ -43,7 +50,7 @@ public class Quit : MonoBehaviour {
             //    lzip.compressDir(di.FullName, 9, filePath + " " + date + ".zip", false, null);
             if (!SceneManager.GetActiveScene().name.Equals("ending"))
                 SQLHandler.UpdateTest(7);
-            SceneManager.LoadScene("Menu");
+            }
             //}
         }
 

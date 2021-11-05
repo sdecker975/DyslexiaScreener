@@ -43,15 +43,18 @@ public class SeqLangOutputHandler : OutputHandler {
 
     public static void PrintOutput(string itemID)
     {
-        string[] data = dataToArray();
+        if (InternetAvailable.internetAvailableStatic)
+        {
+            string[] data = dataToArray();
 
-        string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')",
-                                         Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, points, reactionTime, correctSeq, userSeq, correctOrder, userOrder, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
-        string command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, correct_order, user_order, dot) values " + values;
+            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')",
+                                             Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, points, reactionTime, correctSeq, userSeq, correctOrder, userOrder, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
+            string command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, correct_order, user_order, dot) values " + values;
 
-        //ScoreReports.PrintLocalData("SLC", values);
+            ScoreReports.SaveToCSVLocalData("SLC", values);
 
-        SQLHandler.RunCommand(command);
+            SQLHandler.RunCommand(command);
+        }
     }
 
     public static string[] dataToArray()

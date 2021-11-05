@@ -15,8 +15,14 @@ public class Settings : MonoBehaviour
 
     public static string dateTime = "";
     public static string DateTimeM = ""; //Michael Added code 7.22.2019 to try and push SQL dot to UNIVERSAL
+    List<Toggle> testToggles = new List<Toggle>();
+    public Button saveAndStartButton;
 
-    public static bool DemoMode = true;
+    public GameObject dropDown;
+    public GameObject dropDownStudents;
+    
+    // NOTE: this turns on/off the demo mode e.g. shows test and item id in top left corner
+    public static bool DemoMode = false;
 
     public static string studentID = "";
     public static string userID = "";
@@ -692,6 +698,7 @@ public class Settings : MonoBehaviour
 
     public void SaveAndReturn()
     {
+        Debug.Log("Save and Return");
         SceneHandler.sceneActive[0] = LI;
         SceneHandler.sceneActive[1] = LSSI;
         SceneHandler.sceneActive[2] = LW;
@@ -718,14 +725,21 @@ public class Settings : MonoBehaviour
         SceneHandler.sceneActive[23] = SO2;
         SceneHandler.sceneActive[24] = GNG;
 
-        dateTime = DateTime.Now.ToString("MM-dd-yyyy HH.mm.ss");
-        studentID = studentIDs[students.value];
-        PushTestSession();
-        //Michael added new dateTime variable below -- matches the datetime of the one generated in SQL when test session pushed
-        DateTimeM = SQLHandler.RunCommand("select date_of_testing from CARE1.student_test_info where test_num = " + Settings.testID.ToString())[0][0];
-        DateTimeM = System.DateTime.Parse(DateTimeM).ToString("yyyy/MM/dd");
-        print(studentID);
-        UpdateTestInfo();
+        // TODO: start inside if to check internet
+        if (InternetAvailable.internetAvailableStatic)
+        {
+
+            Debug.Log($"studentIDs count= {studentIDs.Count}");
+            dateTime = DateTime.Now.ToString("MM-dd-yyyy HH.mm.ss");
+            studentID = studentIDs[students.value];
+            PushTestSession();
+            //Michael added new dateTime variable below -- matches the datetime of the one generated in SQL when test session pushed
+            DateTimeM = SQLHandler.RunCommand("select date_of_testing from CARE1.student_test_info where test_num = " + Settings.testID.ToString())[0][0];
+            DateTimeM = System.DateTime.Parse(DateTimeM).ToString("yyyy/MM/dd");
+            print(studentID);
+            UpdateTestInfo();
+        }
+        // TODO: end inside if to check internet
         SceneHandler.GoToNextScene();
     }
 
@@ -866,7 +880,9 @@ public class Settings : MonoBehaviour
             //subset of list is making ids not synced
             studentIDs.Add(studentInfo[0]);
             options.Add(o);
+
         }
+
 
         students.options = options;
     }
@@ -883,14 +899,25 @@ public class Settings : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        testToggles.AddRange(new Toggle[] { LI_T, LSSI_T, LW_T, SI_T, RF_T, RC_T, OV_T, OC_T, PM_T, SB_T, RYM_T, RAN_T, RLNNL_T, RLNNN_T, RLNNM_T, LF_T,
+        SO1_T, SO2_T, VWM_T, VWMB_T, VIS_T, SLC_T, GNG_T});
+
         ClearAll();
         if (!hasPermissions)
         {
             NoPermissions();
         }
-
-        FillDropdown();
-        FillDropDownStudents();
+        if (InternetAvailable.internetAvailableStatic)
+        {
+            FillDropdown();
+            FillDropDownStudents();
+        }/*
+        else
+        {
+            dropDown.SetActive(false);
+            dropDownStudents.SetActive(false);
+        }
+        */
         SetSettingsAtStart();
         SceneHandler.currScene = 0;
 
@@ -902,12 +929,33 @@ public class Settings : MonoBehaviour
     {
         if (teachers.value != currentTeacher)
         {
-            FillDropDownStudents();
+            if (InternetAvailable.internetAvailableStatic)
+            {
+                FillDropDownStudents();
+            }
+
             currentTeacher = teachers.value;
         }
         //if(Input.GetKeyDown(KeyCode.M))
         //{
         //    SQLHandler.SaveReports();
         //}
+        bool allTogglesOff = true;
+
+
+        for (int i = 0; i < testToggles.Count; i++)
+        {
+            if (testToggles[i].isOn)
+            {
+                allTogglesOff = false;
+            }
+            if (!allTogglesOff)
+            {
+                saveAndStartButton.interactable = true;
+            }else if (allTogglesOff)
+            {
+                saveAndStartButton.interactable = false;
+            }
+        }
     }
 }

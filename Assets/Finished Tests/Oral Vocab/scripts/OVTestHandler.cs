@@ -25,6 +25,7 @@ public class OVTestHandler : TestHandler
         base.currentTestNumber = startingEvent;
         setNextTestItem();
         base.mouseIsDone = false;
+        
         SQLHandler.InsertTest();
         SQLHandler.UpdateTest(8);
         CreateTest(frontEndItem);

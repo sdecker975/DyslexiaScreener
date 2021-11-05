@@ -1,0 +1,3882 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 34c25ece5fd5c1f4f88cd2e7c0f7b67e,
+    type: 2}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &128987927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 644.6884
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 413.00168
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -334.18387
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672363, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778468501194672365, guid: a917c214e22386140a92ca76cc9fcda9,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioSourceArray
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a917c214e22386140a92ca76cc9fcda9, type: 3}
+--- !u!1 &1025825748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025825752}
+  - component: {fileID: 1025825751}
+  - component: {fileID: 1025825750}
+  - component: {fileID: 1025825749}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1025825749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025825748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1025825750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025825748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1025825751
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025825748}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 1
+  m_Camera: {fileID: 1853146114}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: -517001817
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1025825752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025825748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1853146110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853146115}
+  - component: {fileID: 1853146114}
+  - component: {fileID: 1853146112}
+  - component: {fileID: 1853146111}
+  - component: {fileID: 1853146118}
+  - component: {fileID: 1853146120}
+  - component: {fileID: 1853146116}
+  - component: {fileID: 1853146119}
+  - component: {fileID: 1853146117}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1853146111
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+--- !u!124 &1853146112
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+--- !u!20 &1853146114
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.7294118, g: 0.7294118, b: 0.7294118, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1853146115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1853146116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d27d70e831506349be4c55ca9977438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testHandler: {fileID: 1853146120}
+  loopTimes: 2
+  reminder: {fileID: 8300000, guid: 8b6d8a0fc4a9a444d9bab85fc749293a, type: 3}
+--- !u!114 &1853146117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fac76983dd6043479e45ce06ecf4b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &1853146118
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &1853146119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0745deef189f93e49a561da85adfdb92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseScreen: {fileID: 1362523276038306, guid: 7f9920c694905e6448b95441e410a3a3,
+    type: 3}
+--- !u!114 &1853146120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853146110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58919a8df4dc614e87510bef532b241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testItemBackEnd:
+  - events:
+    - type: 0
+      audio: {fileID: 8300000, guid: 5afa93f433032de4695ca3c973b4b98c, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: 25c7186f076105a43a552d7f1fe00444, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: a838a8bef647b53489c402bcf380593c, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 1
+        useOriginSize: 0
+        reverseScaleFromParent: 1
+        layer: 0
+        parent: sortCardclone
+        name: hand
+        percentOfHeightScale: 0
+        obj: {fileID: 1372324036480406, guid: 384f4ae5a05fb1d41bb607d50b9c579f, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 1
+      audio: {fileID: 0}
+      anim:
+        targetPos: 0clone
+        originalPos: sortCardclone
+        step: 3
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 8
+      audio: {fileID: 0}
+      anim:
+        targetPos: 0
+        originalPos: BlueStarCard(Clone)
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 1
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 4
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: sortCardclone
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: sortCardclone
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 0
+      audio: {fileID: 8300000, guid: eaad3933d8171424cb2cca3ae5477a76, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 12
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: sortCardclone
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 4
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: sortCardclone
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 1
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: 0fc904cfa57c1ad4c91b958c79df777e, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 1
+        useOriginSize: 0
+        reverseScaleFromParent: 1
+        layer: 0
+        parent: BlueStarCard
+        name: Hand
+        percentOfHeightScale: 0
+        obj: {fileID: 1372324036480406, guid: 384f4ae5a05fb1d41bb607d50b9c579f, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 1
+      audio: {fileID: 0}
+      anim:
+        targetPos: 0clonetrue
+        originalPos: BlueStarCard
+        step: 3
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 8
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 1
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 4
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: BlueStarCard
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 1
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: sortCardclone
+        percentOfHeightScale: 0
+        obj: {fileID: 1850941956732506, guid: 2a787b80a1f547045bb0857553728411, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 10
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 12
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 13
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: 22399a6b5dd110248a58406dabe2534a, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: c42a1a4bedda8824695f37bc281f0b95, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 12
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 4
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: sortCardclone
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 1
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: RedSquareCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000014293570440, guid: 9ce3890e689f5f54a9d17e027a772bee, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: 3e675c50f3d3cb1499c904e929d497dd, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 1
+        useOriginSize: 0
+        reverseScaleFromParent: 1
+        layer: 0
+        parent: RedSquareCard
+        name: Hand
+        percentOfHeightScale: 0
+        obj: {fileID: 1372324036480406, guid: 384f4ae5a05fb1d41bb607d50b9c579f, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 1
+      audio: {fileID: 0}
+      anim:
+        targetPos: 1clonetrue
+        originalPos: RedSquareCard
+        step: 3
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 8
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 1
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 4
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: RedSquareCard
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 1
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: sortCardclone
+        percentOfHeightScale: 0
+        obj: {fileID: 1720483798277758, guid: 0138e68b59f43d84083e15660ac41503, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 10
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 2
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 1
+      destroyOnFinish: 0
+    - type: 12
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 1
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: origin
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: BlueStarCard
+        percentOfHeightScale: 0
+        obj: {fileID: 1000012771853398, guid: 70b8f9389c282834ca35cff80208194a, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 13
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: letterBox
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: letterBox1
+        percentOfHeightScale: 0
+        obj: {fileID: 1106299766210570, guid: 9072307a7cf4a0e42ab0598aa09eea80, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: midOrigin
+        hasParent: 0
+        useOriginSize: 1
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: letterBox1
+        percentOfHeightScale: 0
+        obj: {fileID: 1106299766210570, guid: 9072307a7cf4a0e42ab0598aa09eea80, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: fb9fb9e7b80c5c14d82f5ab2c211c0e4, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 8
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 2
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 4
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: letterBox1
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: midOrigin
+        hasParent: 1
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: Canvas
+        name: startbutton
+        percentOfHeightScale: 0
+        obj: {fileID: 1331321087004380, guid: 83eef76388bd44949b93d5ec75abb70d, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: a09489b7f90bf0a4b958f95859ba7339, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: correct
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 3
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: letterBox
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: letterBox1
+        percentOfHeightScale: 0
+        obj: {fileID: 1106299766210570, guid: 9072307a7cf4a0e42ab0598aa09eea80, type: 3}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 0
+      audio: {fileID: 8300000, guid: 50464e8789b195646aa693ba90b8de7b, type: 3}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 14
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 15
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 0
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  - events:
+    - type: 5
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    currentEvent:
+      type: 2
+      audio: {fileID: 0}
+      anim:
+        targetPos: 
+        originalPos: 
+        step: 0
+      create:
+        targetPos: 
+        hasParent: 0
+        useOriginSize: 0
+        reverseScaleFromParent: 0
+        layer: 0
+        parent: 
+        name: 
+        percentOfHeightScale: 0
+        obj: {fileID: 0}
+      destroy:
+        name: 
+      callFunction:
+        functionName: 
+        objectName: 
+        scriptName: 
+      fading:
+        layer: 
+        fadeTo: 0
+        delta: 0
+      record:
+        fileName: 
+      jumpLabel: 
+      wait: 0
+      loopTo: 0
+      destroyOnFinish: 0
+    eventNumber: 0
+  currentTestNumber: 0
+  testAbbrev: CSC
+  testNumber: 9
+  ceiling: 6
+  checkThreshold: 0
+  correctThreshold: 0
+  wrongCount: 0
+  currentCorrect: 0
+  currentWrong: 0
+  reminded: 0
+  reminderTime: 10
+  pauseTime: 60
+  testItemFrontEnd:
+  - pos: 0
+    id: 0
+    isExample: 1
+    skipPrint: 1
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1850941956732506, guid: 2a787b80a1f547045bb0857553728411,
+      type: 3}
+    isCorrect: 0000
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: 0
+    isExample: 1
+    skipPrint: 1
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1850941956732506, guid: 2a787b80a1f547045bb0857553728411,
+      type: 3}
+    isCorrect: 0100
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: 0
+    isExample: 1
+    skipPrint: 1
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1720483798277758, guid: 0138e68b59f43d84083e15660ac41503,
+      type: 3}
+    isCorrect: 0001
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: 0
+    isExample: 0
+    skipPrint: 1
+    Cards: []
+    CardToSort: {fileID: 0}
+    isCorrect: 
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: 0
+    isExample: 0
+    skipPrint: 1
+    Cards: []
+    CardToSort: {fileID: 0}
+    isCorrect: 
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: EF_C1
+    isExample: 0
+    skipPrint: 0
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1850941956732506, guid: 2a787b80a1f547045bb0857553728411,
+      type: 3}
+    isCorrect: 0100
+    hasGreenButton: 1
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: EF_C2
+    isExample: 0
+    skipPrint: 0
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1720483798277758, guid: 0138e68b59f43d84083e15660ac41503,
+      type: 3}
+    isCorrect: 0001
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: EF_C3
+    isExample: 0
+    skipPrint: 0
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1850941956732506, guid: 2a787b80a1f547045bb0857553728411,
+      type: 3}
+    isCorrect: 0100
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: EF_C4
+    isExample: 0
+    skipPrint: 0
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1850941956732506, guid: 2a787b80a1f547045bb0857553728411,
+      type: 3}
+    isCorrect: 0100
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: EF_C5
+    isExample: 0
+    skipPrint: 0
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1720483798277758, guid: 0138e68b59f43d84083e15660ac41503,
+      type: 3}
+    isCorrect: 0001
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: EF_C6
+    isExample: 0
+    skipPrint: 0
+    Cards:
+    - {fileID: 1000013407553722, guid: 0128bfc22319c8a42bd04687d92b5ff6, type: 3}
+    - {fileID: 1000012191803574, guid: 7345af05d7947184590ec9a35f375b8f, type: 3}
+    CardToSort: {fileID: 1720483798277758, guid: 0138e68b59f43d84083e15660ac41503,
+      type: 3}
+    isCorrect: 0001
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  - pos: 0
+    id: 0
+    isExample: 0
+    skipPrint: 1
+    Cards: []
+    CardToSort: {fileID: 1641654646490710, guid: 8c6e60b07a7ef074db57d19063a1001c,
+      type: 3}
+    isCorrect: 
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 1
+    nextGameName: ShapeSort2
+  frontEndItem:
+    pos: 0
+    id: 
+    isExample: 0
+    skipPrint: 0
+    Cards: []
+    CardToSort: {fileID: 0}
+    isCorrect: 
+    hasGreenButton: 0
+    hasLetterBox: 0
+    LetterBox: {fileID: 0}
+    nextGame: 0
+    nextGameName: 
+  startingEvent: 0
+--- !u!1 &2059578710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2059578713}
+  - component: {fileID: 2059578712}
+  - component: {fileID: 2059578711}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2059578711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059578710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &2059578712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059578710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &2059578713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059578710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

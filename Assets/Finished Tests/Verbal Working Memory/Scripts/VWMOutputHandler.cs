@@ -36,16 +36,19 @@ public class VWMOutputHandler : OutputHandler {
 
     public static void PrintOutput(bool backwards, string itemID)
     {
-        string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}','{8}')",
+        if (InternetAvailable.internetAvailableStatic)
+        {
+            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}','{8}')",
                                         Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), correctSeq, inputSeq, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
-        string command = "";
-        if(!backwards)
-            command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, dot) values " + values;
-        else
-            command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, dot) values " + values;
+            string command = "";
+            if (!backwards)
+                command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, dot) values " + values;
+            else
+                command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, dot) values " + values;
 
-        //ScoreReports.PrintLocalData("VWM" + (backwards?"B":""), values);
+            ScoreReports.SaveToCSVLocalData("VWM" + (backwards ? "B" : ""), values);
 
-        SQLHandler.RunCommand(command);
+            SQLHandler.RunCommand(command);
+        }
     }
 }

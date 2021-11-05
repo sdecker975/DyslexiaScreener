@@ -33,17 +33,18 @@ public class GNGOutputHandler : OutputHandler
 
     public static void PrintOutput(string itemID)
     {
+        if (InternetAvailable.internetAvailableStatic)
+        {
+            print(responseName);
 
-        //print(responseName);
+            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')",
+            Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), responsePosition, responseName, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"), FindObjectOfType<ClickCardGNG>().hitTimes);
 
-        //string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')",
-        //                            Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), responsePosition, responseName, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"), FindObjectOfType<ClickCardGNG>().hitTimes);
+            string command = "insert into CARE1.CPT (exam_type, id, test_id, item_id, correctness, reaction_time, select_pos, select_name, dot, hit_num) values " + values;
 
-        //string command = "insert into CARE1.CPT (exam_type, id, test_id, item_id, correctness, reaction_time, select_pos, select_name, dot, hit_num) values " + values;
-        
-        //ScoreReports.PrintLocalData("CPT", values);
-        
+            ScoreReports.SaveToCSVLocalData("CPT", values);
 
-        //SQLHandler.RunCommand(command);
+            SQLHandler.RunCommand(command);
+        }
     }
 }

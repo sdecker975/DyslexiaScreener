@@ -10,11 +10,14 @@ public class CheckQuit : MonoBehaviour
     {
         // This game object needs to survive multiple levels
         Object.DontDestroyOnLoad(this.gameObject);
+        Application.wantsToQuit += WantsToQuit;
     }
-
-    void OnApplicationQuit()
+    static bool WantsToQuit()
     {
         if (!canQuit)
-            Application.CancelQuit();
+        {
+            return false;
+        }else
+        return true;
     }
 }

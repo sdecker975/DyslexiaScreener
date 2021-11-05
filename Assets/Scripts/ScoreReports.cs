@@ -99,7 +99,7 @@ public class ScoreReports : OutputHandler {
         reactionTimes.Clear();
     }
 
-    public static void PrintLocalData(string testName, string output)
+    public static void SaveToCSVLocalData(string testName, string output)
     {
         string filePath = "data/" + Settings.last + "_" + Settings.first + "/" + testName + "-localdata-"+ Settings.dateTime + ".csv";
         System.IO.FileInfo fileInfo = new System.IO.FileInfo(filePath);
