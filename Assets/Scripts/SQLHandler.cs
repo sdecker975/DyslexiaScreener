@@ -14,7 +14,7 @@ public class SQLHandler : MonoBehaviour {
     //static string DATABASE = "acnlabu1_care";
     //static string DATABASE2 = "university";
 
-    static string SERVER_NAME = "care3.cfssp092qqmp.us-east-2.rds.amazonaws.com";
+    static string SERVER_NAME = "caredb.cfssp092qqmp.us-east-2.rds.amazonaws.com";
     //this user can read and write, will probably want to make a different user for this and for pushing data, one can read, other can write
     public static string SERVER_USER = "careuser";
     static string SERVER_PASS = "Neurocog1!";
