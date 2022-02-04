@@ -106,7 +106,7 @@ namespace MHLab.Patch.Admin.Editor.Components.Contents
         private void TriggerDebugReportCollection()
         {
             var system = DebugHelper.GetSystemInfo();
-            var report = Debugger.GenerateDebugReport(CurrentWindow.AdminSettings, system, new NewtonsoftSerializer());
+            var report = Debugger.GenerateDebugReport(CurrentWindow.AdminSettings, system, new JsonSerializer());
             
             File.WriteAllText(CurrentWindow.AdminSettings.GetDebugReportFilePath(), report);
             

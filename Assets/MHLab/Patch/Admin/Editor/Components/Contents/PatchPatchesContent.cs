@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MHLab.Patch.Core.Admin;
 using MHLab.Patch.Core.Admin.Progresses;
+using MHLab.Patch.Core.Logging;
 using MHLab.Patch.Utilities.Serializing;
 using UnityEditor;
 using UnityEngine;
@@ -52,8 +53,8 @@ namespace MHLab.Patch.Admin.Editor.Components.Contents
             progress.ProgressChanged += ProgressChanged;
             
             _context = new AdminPatchContext(CurrentWindow.AdminSettings, progress);
-            _context.Logger = new MHLab.Patch.Utilities.Logging.Logger(CurrentWindow.AdminSettings.GetLogsFilePath(), CurrentWindow.AdminSettings.DebugMode);
-            _context.Serializer = new NewtonsoftSerializer();
+            _context.Logger = new SimpleLogger(_context.FileSystem, CurrentWindow.AdminSettings.GetLogsFilePath(), CurrentWindow.AdminSettings.DebugMode);
+            _context.Serializer = new JsonSerializer();
             _context.LocalizedMessages = CurrentWindow.Localization;
             
             _builder = new PatchBuilder(_context);

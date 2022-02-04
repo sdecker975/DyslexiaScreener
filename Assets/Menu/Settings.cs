@@ -35,8 +35,8 @@ public class Settings : MonoBehaviour
     int currentTeacher = -1;
 
     //Reading tests
-    public static bool LI, LSSI, LW, SI, RF, RC;
-    public Toggle LI_T, LSSI_T, LW_T, SI_T, RF_T, RC_T;
+    public static bool LI, LSSI, LW, SI, RF, RC, WIS;
+    public Toggle LI_T, LSSI_T, LW_T, SI_T, RF_T, RC_T, WIS_T;
 
     //Diagnostic tests
     public static bool OV, OC, PM, SB, RYM, RAN, RLNNL, RLNNN, RLNNM, LF;
@@ -163,6 +163,11 @@ public class Settings : MonoBehaviour
         GNG = input;
         GameObject.Find("Canvas/Highlights/GNG").SetActive(input);
     }
+    public void WordIDSpan(bool input)
+    {
+        WIS = input;
+        GameObject.Find("Canvas/Highlights/WIS").SetActive(input);
+    }
     #endregion
     #region "These are the button functions"
     public void ClearAll()
@@ -190,6 +195,7 @@ public class Settings : MonoBehaviour
         VIS_T.isOn = VIS = false;
         SLC_T.isOn = SLC = false;
         GNG_T.isOn = GNG = false;
+        WIS_T.isOn = WIS = false;
     }
 
     public void SetSettings1()
@@ -221,6 +227,8 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 1/VS").SetActive(settings1tests[20] = VIS_T.isOn);
             GameObject.Find("Canvas/Dots/Button 1/SL").SetActive(settings1tests[21] = SLC_T.isOn);
             GameObject.Find("Canvas/Dots/Button 1/GNG").SetActive(settings1tests[22] = GNG_T.isOn);
+            GameObject.Find("Canvas/Dots/Button 1/WIS").SetActive(settings1tests[23] = WIS_T.isOn);
+
         }
         else
         {
@@ -247,6 +255,7 @@ public class Settings : MonoBehaviour
             VIS_T.isOn = VIS = settings1tests[20];
             SLC_T.isOn = SLC = settings1tests[21];
             GNG_T.isOn = GNG = settings1tests[22];
+            WIS_T.isOn = WIS = settings1tests[23];
         }
     }
 
@@ -287,6 +296,7 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 2/VS").SetActive(settings2tests[20] = VIS_T.isOn);
             GameObject.Find("Canvas/Dots/Button 2/SL").SetActive(settings2tests[21] = SLC_T.isOn);
             GameObject.Find("Canvas/Dots/Button 2/GNG").SetActive(settings2tests[22] = GNG_T.isOn);
+            GameObject.Find("Canvas/Dots/Button 2/WIS").SetActive(settings2tests[23] = WIS_T.isOn);
         }
         else
         {
@@ -313,6 +323,7 @@ public class Settings : MonoBehaviour
             VIS_T.isOn = VIS = settings2tests[20];
             SLC_T.isOn = SLC = settings2tests[21];
             GNG_T.isOn = GNG = settings2tests[22];
+            WIS_T.isOn = WIS = settings2tests[23];
         }
     }
 
@@ -353,6 +364,7 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 3/VS").SetActive(settings3tests[20] = VIS_T.isOn);
             GameObject.Find("Canvas/Dots/Button 3/SL").SetActive(settings3tests[21] = SLC_T.isOn);
             GameObject.Find("Canvas/Dots/Button 3/GNG").SetActive(settings3tests[22] = GNG_T.isOn);
+            GameObject.Find("Canvas/Dots/Button 3/WIS").SetActive(settings3tests[23] = WIS_T.isOn);
         }
         else
         {
@@ -379,6 +391,7 @@ public class Settings : MonoBehaviour
             VIS_T.isOn = VIS = settings3tests[20];
             SLC_T.isOn = SLC = settings3tests[21];
             GNG_T.isOn = GNG = settings3tests[22];
+            WIS_T.isOn = WIS = settings3tests[23];
         }
     }
 
@@ -419,6 +432,7 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 4/VS").SetActive(settings4tests[20] = VIS_T.isOn);
             GameObject.Find("Canvas/Dots/Button 4/SL").SetActive(settings4tests[21] = SLC_T.isOn);
             GameObject.Find("Canvas/Dots/Button 4/GNG").SetActive(settings4tests[22] = GNG_T.isOn);
+            GameObject.Find("Canvas/Dots/Button 4/WIS").SetActive(settings4tests[23] = WIS_T.isOn);
         }
         else
         {
@@ -445,6 +459,7 @@ public class Settings : MonoBehaviour
             VIS_T.isOn = VIS = settings4tests[20];
             SLC_T.isOn = SLC = settings4tests[21];
             GNG_T.isOn = GNG = settings4tests[22];
+            WIS_T.isOn = WIS = settings4tests[23];
         }
     }
 
@@ -485,6 +500,7 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 5/VS").SetActive(settings5tests[20] = VIS_T.isOn);
             GameObject.Find("Canvas/Dots/Button 5/SL").SetActive(settings5tests[21] = SLC_T.isOn);
             GameObject.Find("Canvas/Dots/Button 5/GNG").SetActive(settings5tests[22] = GNG_T.isOn);
+            GameObject.Find("Canvas/Dots/Button 5/WIS").SetActive(settings5tests[23] = WIS_T.isOn);
         }
         else
         {
@@ -511,6 +527,7 @@ public class Settings : MonoBehaviour
             VIS_T.isOn = VIS = settings5tests[20];
             SLC_T.isOn = SLC = settings5tests[21];
             GNG_T.isOn = GNG = settings5tests[22];
+            WIS_T.isOn = WIS = settings5tests[23];
         }
     }
 
@@ -549,6 +566,8 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 1/VS").SetActive(settings1tests[20]);
             GameObject.Find("Canvas/Dots/Button 1/SL").SetActive(settings1tests[21]);
             GameObject.Find("Canvas/Dots/Button 1/GNG").SetActive(settings1tests[22]);
+            GameObject.Find("Canvas/Dots/Button 1/WIS").SetActive(settings1tests[23]);
+
 
         }
         if (settings2)
@@ -576,6 +595,8 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 2/VS").SetActive(settings2tests[20]);
             GameObject.Find("Canvas/Dots/Button 2/SL").SetActive(settings2tests[21]);
             GameObject.Find("Canvas/Dots/Button 2/GNG").SetActive(settings2tests[22]);
+            GameObject.Find("Canvas/Dots/Button 2/WIS").SetActive(settings2tests[23]);
+
         }
         if (settings3)
         {
@@ -602,6 +623,8 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 3/VS").SetActive(settings3tests[20]);
             GameObject.Find("Canvas/Dots/Button 3/SL").SetActive(settings3tests[21]);
             GameObject.Find("Canvas/Dots/Button 3/GNG").SetActive(settings3tests[22]);
+            GameObject.Find("Canvas/Dots/Button 3/WIS").SetActive(settings3tests[23]);
+
         }
         if (settings4)
         {
@@ -628,6 +651,8 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 4/VS").SetActive(settings4tests[20]);
             GameObject.Find("Canvas/Dots/Button 4/SL").SetActive(settings4tests[21]);
             GameObject.Find("Canvas/Dots/Button 4/GNG").SetActive(settings4tests[22]);
+            GameObject.Find("Canvas/Dots/Button 4/WIS").SetActive(settings4tests[23]);
+
         }
         if (settings5)
         {
@@ -654,6 +679,8 @@ public class Settings : MonoBehaviour
             GameObject.Find("Canvas/Dots/Button 5/VS").SetActive(settings5tests[20]);
             GameObject.Find("Canvas/Dots/Button 5/SL").SetActive(settings5tests[21]);
             GameObject.Find("Canvas/Dots/Button 5/GNG").SetActive(settings5tests[22]);
+            GameObject.Find("Canvas/Dots/Button 5/WIS").SetActive(settings5tests[23]);
+
         }
     }
 
@@ -682,6 +709,7 @@ public class Settings : MonoBehaviour
         VIS_T.enabled = false;
         SLC_T.enabled = false;
         GNG_T.enabled = false;
+        WIS_T.enabled = false;
         report_T.enabled = false;
         raw_T.enabled = false;
         email_T.enabled = false;
@@ -724,6 +752,7 @@ public class Settings : MonoBehaviour
         SceneHandler.sceneActive[22] = SO1;
         SceneHandler.sceneActive[23] = SO2;
         SceneHandler.sceneActive[24] = GNG;
+        SceneHandler.sceneActive[25] = WIS;
 
         // TODO: start inside if to check internet
         if (InternetAvailable.internetAvailableStatic)
@@ -889,8 +918,8 @@ public class Settings : MonoBehaviour
 
     void UpdateTestInfo()
     {
-        string values = string.Format("update CARE1.student_test_info set LI = {0}, LSSI = {1}, WI = {2}, SI = {3}, RC = {4}, RF = {5}, OV = {6}, OC = {7}, SLC = {8}, RYM = {9}, SB = {10}, PM = {11}, VWM = {12}, VWMB = {13}, VIS = {14}, CSC = {15}, CSS = {16}, CSA = {17}, WCST = {18}",
-            LI ? 9 : 0, LSSI ? 9 : 0, LW ? 9 : 0, SI ? 9 : 0, RC ? 9 : 0, RF ? 9 : 0, OV ? 9 : 0, OC ? 9 : 0, SLC ? 9 : 0, RYM ? 9 : 0, SB ? 9 : 0, PM ? 9 : 0, VWM ? 9 : 0, VWMB ? 9 : 0, VIS ? 9 : 0, SO1 ? 9 : 0, SO1 ? 9 : 0, SO1 ? 9 : 0, SO2 ? 9 : 0);
+        string values = string.Format("update CARE1.student_test_info set LI = {0}, LSSI = {1}, WI = {2}, SI = {3}, RC = {4}, RF = {5}, OV = {6}, OC = {7}, SLC = {8}, RYM = {9}, SB = {10}, PM = {11}, VWM = {12}, VWMB = {13}, VIS = {14}, CSC = {15}, CSS = {16}, CSA = {17}, WCST = {18}, WIS = {19}",
+            LI ? 9 : 0, LSSI ? 9 : 0, LW ? 9 : 0, SI ? 9 : 0, RC ? 9 : 0, RF ? 9 : 0, OV ? 9 : 0, OC ? 9 : 0, SLC ? 9 : 0, RYM ? 9 : 0, SB ? 9 : 0, PM ? 9 : 0, VWM ? 9 : 0, VWMB ? 9 : 0, VIS ? 9 : 0, SO1 ? 9 : 0, SO1 ? 9 : 0, SO1 ? 9 : 0, SO2 ? 9 : 0, WIS ? 9 : 0);
         string command = values + " where test_num = " + testID;
         print(command);
         SQLHandler.RunCommand(command);
@@ -900,7 +929,7 @@ public class Settings : MonoBehaviour
     void Start()
     {
         testToggles.AddRange(new Toggle[] { LI_T, LSSI_T, LW_T, SI_T, RF_T, RC_T, OV_T, OC_T, PM_T, SB_T, RYM_T, RAN_T, RLNNL_T, RLNNN_T, RLNNM_T, LF_T,
-        SO1_T, SO2_T, VWM_T, VWMB_T, VIS_T, SLC_T, GNG_T});
+        SO1_T, SO2_T, VWM_T, VWMB_T, VIS_T, SLC_T, GNG_T, WIS_T});
 
         ClearAll();
         if (!hasPermissions)

@@ -10,9 +10,17 @@ namespace MHLab.Patch.Launcher.Scripts.UI
         public Text DetailsMessage;
         public Button CloseButton;
         public Button ContinueButton;
+
+        private void ClearListeners()
+        {
+            CloseButton.onClick.RemoveAllListeners();
+            ContinueButton.onClick.RemoveAllListeners();
+        }
         
         public void ShowDialog(string main, string detail, Action onClose, Action onContinue)
         {
+            ClearListeners();
+            
             MainMessage.text = main;
             DetailsMessage.text = detail;
             CloseButton.onClick.AddListener(() =>
@@ -36,6 +44,8 @@ namespace MHLab.Patch.Launcher.Scripts.UI
 
         public void ShowCloseDialog(string main, string detail, Action onClose)
         {
+            ClearListeners();
+            
             MainMessage.text = main;
             DetailsMessage.text = detail;
             CloseButton.onClick.AddListener(() =>
@@ -49,6 +59,11 @@ namespace MHLab.Patch.Launcher.Scripts.UI
             ContinueButton.gameObject.SetActive(false);
             
             gameObject.SetActive(true);
+        }
+
+        public void CloseDialog()
+        {
+            gameObject.SetActive(false);
         }
     }
 }

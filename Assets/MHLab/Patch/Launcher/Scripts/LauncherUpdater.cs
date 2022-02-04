@@ -23,11 +23,12 @@ namespace MHLab.Patch.Launcher.Scripts
                 originalSettings.DebugMode              = settingsOverride.DebugMode;
                 originalSettings.PatcherUpdaterSafeMode = settingsOverride.PatcherUpdaterSafeMode;
             });
+
+            context.Downloader.DownloadComplete += Data.DownloadComplete;
             
             NetworkChecker = new NetworkChecker();
             
             _patcherUpdater = new PatcherUpdater(context);
-            _patcherUpdater.Downloader.DownloadComplete += Data.DownloadComplete;
             
             context.RegisterUpdateStep(_patcherUpdater);
 
@@ -88,11 +89,11 @@ namespace MHLab.Patch.Launcher.Scripts
         
         protected override void UpdateDownloadSpeed()
         {
-            _patcherUpdater.Downloader.DownloadSpeedMeter.Tick();
+            Context.Downloader.DownloadSpeedMeter.Tick();
             
-            if (_patcherUpdater.Downloader.DownloadSpeedMeter.DownloadSpeed > 0)
+            if (Context.Downloader.DownloadSpeedMeter.DownloadSpeed > 0)
             {
-                Data.DownloadSpeed.text = _patcherUpdater.Downloader.DownloadSpeedMeter.FormattedDownloadSpeed;
+                Data.DownloadSpeed.text = Context.Downloader.DownloadSpeedMeter.FormattedDownloadSpeed;
             }
             else
             {
@@ -185,7 +186,17 @@ namespace MHLab.Patch.Launcher.Scripts
         
         private void OnDisable()
         {
-            _patcherUpdater.Downloader.Cancel();            
+            Context.Downloader.Cancel();            
+        }
+        
+        public void ResumeDownload()
+        {
+            Context.Downloader.Resume();
+        }
+
+        public void PauseDownload()
+        {
+            Context.Downloader.Pause();
         }
     }
 }

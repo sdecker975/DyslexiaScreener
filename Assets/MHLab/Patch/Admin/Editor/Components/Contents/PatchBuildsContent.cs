@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using MHLab.Patch.Core.Admin;
 using MHLab.Patch.Core.Admin.Progresses;
 using MHLab.Patch.Core.IO;
+using MHLab.Patch.Core.Logging;
 using MHLab.Patch.Utilities.Serializing;
 using UnityEditor;
-using UnityEditor.Build.Content;
 using UnityEngine;
 
 namespace MHLab.Patch.Admin.Editor.Components.Contents
@@ -64,8 +64,8 @@ namespace MHLab.Patch.Admin.Editor.Components.Contents
             progress.ProgressChanged += ProgressChanged;
             
             _context = new AdminBuildContext(CurrentWindow.AdminSettings, progress);
-            _context.Logger = new MHLab.Patch.Utilities.Logging.Logger(CurrentWindow.AdminSettings.GetLogsFilePath(), CurrentWindow.AdminSettings.DebugMode);
-            _context.Serializer = new NewtonsoftSerializer();
+            _context.Logger = new SimpleLogger(_context.FileSystem, CurrentWindow.AdminSettings.GetLogsFilePath(), CurrentWindow.AdminSettings.DebugMode);
+            _context.Serializer = new JsonSerializer();
             _context.LocalizedMessages = CurrentWindow.Localization;
             _context.Initialize();
             
@@ -316,8 +316,6 @@ namespace MHLab.Patch.Admin.Editor.Components.Contents
         private void TriggerBuild()
         {
             var currentVersion = _context.VersionFactory.Create(_context.GetLastVersion());
-            
-            Debug.Log($"currentVersion= {currentVersion} isNull= {currentVersion == null}");
 
             if (currentVersion != null)
             {
@@ -336,11 +334,10 @@ namespace MHLab.Patch.Admin.Editor.Components.Contents
             }
             else
             {
-                currentVersion = _context.VersionFactory.Create(1,0,0);
+                currentVersion = _context.VersionFactory.Create();
             }
 
             _context.BuildVersion = currentVersion;
-            Debug.Log($"BuildVersion= {currentVersion}");
             _context.Initialize();
             _builder.Build();
         }

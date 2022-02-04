@@ -87,7 +87,7 @@ public class LoginScript : MonoBehaviour {
             }
             else
             {
-                Debug.Log("Internet is available");
+                //Debug.Log("Internet is available");
                 // internet connection is available
                 if (!InternetAvailable.internetAvailableStatic)
                 {

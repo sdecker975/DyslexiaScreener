@@ -1,0 +1,36 @@
+<linker>
+	<assembly fullname="MHLab.Patch.Core">
+		<type fullname="MHLab.Patch.Core.BuildsIndex">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.BuildDefinitionEntry">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.BuildDefinition">
+			<method signature="System.Void .ctor()"/>
+		</type>
+
+		<type fullname="MHLab.Patch.Core.PatchIndex">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.PatchIndexEntry">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.PatchDefinitionEntry">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.PatchDefinition">
+			<method signature="System.Void .ctor()"/>
+		</type>
+
+		<type fullname="MHLab.Patch.Core.UpdaterDefinitionEntry">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.UpdaterDefinition">
+			<method signature="System.Void .ctor()"/>
+		</type>
+		<type fullname="MHLab.Patch.Core.UpdaterSafeModeDefinition">
+			<method signature="System.Void .ctor()"/>
+		</type>
+	</assembly>
+</linker>

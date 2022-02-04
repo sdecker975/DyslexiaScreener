@@ -72,7 +72,7 @@ public class ServerConnection : MonoBehaviour {
             }
             else
             {
-                Debug.Log("Internet is available");
+                //Debug.Log("Internet is available");
                 // internet connection is available
                 InternetAvailable.internetAvailableStatic = true;
                 if (wifiImage.gameObject.activeInHierarchy)

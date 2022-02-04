@@ -32,7 +32,12 @@ namespace MHLab.Patch.Launcher.Scripts.Utilities
             processChmod.StartInfo.FileName = "chmod";
             processChmod.StartInfo.Arguments = "+x \"" + filename + "\"";
             processChmod.Start();
-		    
+            
+            processChmod = new Process();
+            processChmod.StartInfo.FileName = "chmod";
+            processChmod.StartInfo.Arguments = "-R 755 \"" + filePath + "\"";
+            processChmod.Start();
+            
             var processAttr = new Process();
             processAttr.StartInfo.FileName = "xattr";
             processAttr.StartInfo.Arguments = "-d com.apple.quarantine \"" + filePath + "\"";

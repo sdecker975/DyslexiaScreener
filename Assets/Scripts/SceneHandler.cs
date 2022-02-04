@@ -8,8 +8,8 @@ using System.IO;
 public class SceneHandler : MonoBehaviour
 {
 
-    public static string[] scenes =     { "LetterID", "LetterSymbol", "LetterWord2", "SentenceID", "ReadingComp", "ReadingFluency2", "OralVocab2", "OralComp2", "SequentialLanguage", "Rhyming", "SoundBlending", "Phoneme", "LexicalFluency", "RapidAutomaticNaming", "RapidLetterNumber-Number", "RapidLetterNumber-Letter", "RapidLetterNumber-Mixed", "VerbalMemory", "VerbalMemoryBackwards", "VisualSearch", "ColorSort", "ShapeSort3", "AdvancedGame", "wcst","GNG", "ending" };
-    public static bool[] sceneActive =  { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true };
+    public static string[] scenes =     { "LetterID", "LetterSymbol", "LetterWord2", "SentenceID", "ReadingComp", "ReadingFluency2", "OralVocab2", "OralComp2", "SequentialLanguage", "Rhyming", "SoundBlending", "Phoneme", "LexicalFluency", "RapidAutomaticNaming", "RapidLetterNumber-Number", "RapidLetterNumber-Letter", "RapidLetterNumber-Mixed", "VerbalMemory", "VerbalMemoryBackwards", "VisualSearch", "ColorSort", "ShapeSort3", "AdvancedGame", "wcst","GNG","WIS", "ending" };
+    public static bool[] sceneActive =  { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true };
     public static int currScene = 0;
 
     public static void GoToNextScene()

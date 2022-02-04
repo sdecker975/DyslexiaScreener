@@ -14,6 +14,8 @@ namespace MHLab.Patch.Launcher.Scripts
         private Repairer _repairer;
         private Updater _updater;
         
+        private bool _alreadyTriggeredGameStart = false;
+        
         protected override void Initialize(UpdatingContext context)
         {
             context.OverrideSettings<SettingsOverride>((originalSettings, settingsOverride) =>
@@ -22,13 +24,12 @@ namespace MHLab.Patch.Launcher.Scripts
                 originalSettings.PatcherUpdaterSafeMode = settingsOverride.PatcherUpdaterSafeMode;
             });
             
+            context.Downloader.DownloadComplete += Data.DownloadComplete;
+            
             NetworkChecker = new NetworkChecker();
             
             _repairer = new Repairer(context);
-            _repairer.Downloader.DownloadComplete += Data.DownloadComplete;
-
             _updater = new Updater(context);
-            _updater.Downloader.DownloadComplete += Data.DownloadComplete;
             
             context.RegisterUpdateStep(_repairer);
             context.RegisterUpdateStep(_updater);
@@ -89,16 +90,11 @@ namespace MHLab.Patch.Launcher.Scripts
 
         protected override void UpdateDownloadSpeed()
         {
-            _repairer.Downloader.DownloadSpeedMeter.Tick();
-            _updater.Downloader.DownloadSpeedMeter.Tick();
+            Context.Downloader.DownloadSpeedMeter.Tick();
             
-            if (_repairer.Downloader.DownloadSpeedMeter.DownloadSpeed > 0)
+            if (Context.Downloader.DownloadSpeedMeter.DownloadSpeed > 0)
             {
-                Data.DownloadSpeed.text = _repairer.Downloader.DownloadSpeedMeter.FormattedDownloadSpeed;
-            }
-            else if (_updater.Downloader.DownloadSpeedMeter.DownloadSpeed > 0)
-            {
-                Data.DownloadSpeed.text = _updater.Downloader.DownloadSpeedMeter.FormattedDownloadSpeed;
+                Data.DownloadSpeed.text = Context.Downloader.DownloadSpeedMeter.FormattedDownloadSpeed;
             }
             else
             {
@@ -174,6 +170,9 @@ namespace MHLab.Patch.Launcher.Scripts
 
         private void StartGame()
         {
+            if (_alreadyTriggeredGameStart) return;
+
+            _alreadyTriggeredGameStart = true;
             var filePath = PathsManager.Combine(Context.Settings.GetGamePath(), Data.GameExecutableName);
             ApplicationStarter.StartApplication(filePath, $"{Context.Settings.LaunchArgumentParameter}={Context.Settings.LaunchArgumentValue}");
             Application.Quit();
@@ -184,10 +183,20 @@ namespace MHLab.Patch.Launcher.Scripts
             GenerateDebugReport("debug_report_launcher.txt");
         }
         
-        private void OnDestroy()
+        private void OnDisable()
         {
-            _repairer.Downloader.Cancel();
+            Context.Downloader.Cancel();
             Debug.Log("Download canceled");
+        }
+        
+        public void ResumeDownload()
+        {
+            Context.Downloader.Resume();
+        }
+
+        public void PauseDownload()
+        {
+            Context.Downloader.Pause();
         }
     }
 }

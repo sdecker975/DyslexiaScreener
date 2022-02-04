@@ -1,13 +1,9 @@
 using System;
-using System.IO;
 using System.Threading;
-using MHLab.Patch.Core.Client;
-using MHLab.Patch.Core.Client.IO;
 using MHLab.Patch.Core.Client.Progresses;
 using MHLab.Patch.Core.Utilities;
 using MHLab.Patch.Launcher.Scripts.UI;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace MHLab.Patch.Launcher.Scripts
@@ -19,20 +15,29 @@ namespace MHLab.Patch.Launcher.Scripts
         public string GameExecutableName;
 
         public bool LaunchAnywayOnError;
+        public bool DebugMode;
         
-        public Dispatcher Dispatcher;
+        public Dispatcher  Dispatcher;
         public ProgressBar ProgressBar;
-        public Text DownloadSpeed;
-        public Text ProgressPercentage;
-        public Text Logs;
-        public Text ElapsedTime;
-        public Dialog Dialog;
-        public Text SizeProgress;
+        public Text        DownloadSpeed;
+        public Text        ProgressPercentage;
+        public Text        Logs;
+        public Text        ElapsedTime;
+        public Dialog      Dialog;
+        public Text        SizeProgress;
+        public Text        SoftwareVersion;
+        public Button      ResumeButton;
+        public Button      PauseButton;
         
         public const string WorkspaceFolderName = "PATCHWorkspace";
         
         private Timer _timer;
         private int _elapsed;
+
+        private void Start()
+        {
+            ResetComponents();
+        }
 
         public void DownloadComplete(object sender, EventArgs e)
         {
@@ -65,11 +70,12 @@ namespace MHLab.Patch.Launcher.Scripts
 
         public void ResetComponents()
         {
-            ProgressPercentage.text = string.Empty;
-            DownloadSpeed.text = string.Empty;
-            ElapsedTime.text = string.Empty;
-            Logs.text = string.Empty;
-
+            ProgressPercentage.text = "0%";
+            DownloadSpeed.text      = "0B/s";
+            ElapsedTime.text        = "00:00";
+            Logs.text               = string.Empty;
+            SizeProgress.text       = "0B/0B";
+            
             ProgressBar.Progress = 0;
         }
 
@@ -83,7 +89,7 @@ namespace MHLab.Patch.Launcher.Scripts
                     var minutes = _elapsed / 60;
                     var seconds = _elapsed % 60;
 
-                    ElapsedTime.text = string.Format("{0}:{1}", (minutes < 10) ? "0" + minutes : minutes.ToString(), (seconds < 10) ? "0" + seconds : seconds.ToString());
+                    ElapsedTime.text = string.Format("{0}:{1}", minutes.ToString("00"), seconds.ToString("00"));
                     
                     updateDownloadSpeed.Invoke();
                 });
