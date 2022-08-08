@@ -76,7 +76,7 @@ public class GNGTestHandler : TestHandler
 
             //Monster Left Target
             o = new GameObject("MonsterLeft");
-            o.transform.position = new Vector3(leftScreenPos + leftScreenPos/2, topScreenPos - fullScreenHeight / 6, 0);
+            o.transform.position = new Vector3(leftScreenPos + leftScreenPos/5, topScreenPos - fullScreenHeight / 6, 0);
             tm = o.AddComponent<TextMesh>();
             tm.alignment = TextAlignment.Center;
             tm.anchor = TextAnchor.MiddleCenter;
@@ -105,7 +105,7 @@ public class GNGTestHandler : TestHandler
             //o.layer = LayerMask.NameToLayer("fade")
 
             o = new GameObject("topleftoffscreen");
-            o.transform.position = new Vector3(-fullScreenWidth / 1.5f, topScreenPos - fullScreenHeight / 6, 0);
+            o.transform.position = new Vector3(-fullScreenWidth, topScreenPos - fullScreenHeight / 6, 0);
             tm = o.AddComponent<TextMesh>();
             tm.alignment = TextAlignment.Center;
             tm.anchor = TextAnchor.MiddleCenter;

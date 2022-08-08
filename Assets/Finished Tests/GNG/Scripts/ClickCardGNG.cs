@@ -21,7 +21,12 @@ public class ClickCardGNG : MonoBehaviour
         GNGTestHandler gng = Camera.main.GetComponent<GNGTestHandler>();
         e = gng.backEndItem.currentEvent.type;
 
-        if(!gng.frontEndItem.id.Contains("B") && !gng.frontEndItem.id.Contains("b"))
+        if (gng.frontEndItem.id.Contains("GNG240B"))
+        {
+            SQLHandler.UpdateTest(1);
+        }
+
+        if (!gng.frontEndItem.id.Contains("B") && !gng.frontEndItem.id.Contains("b"))
         {
             gng.frontEndItem.isi = 800;
         }
@@ -47,14 +52,14 @@ public class ClickCardGNG : MonoBehaviour
                     GNGOutputHandler.correct = false;
                     GNGOutputHandler.responseName = responseName;
                     Camera.main.GetComponent<ContinueButtonGNG>().Continue(0);
-                    GNGOutputHandler.StopTimer("CPT", gng.frontEndItem.id);
+                    GNGOutputHandler.StopTimer("GNG", gng.frontEndItem.id);
                 }
                 else
                 {
                     GNGOutputHandler.correct = true;
                     GNGOutputHandler.responseName = responseName;
                     Camera.main.GetComponent<ContinueButtonGNG>().Continue(0);
-                    GNGOutputHandler.StopTimer("CPT", gng.frontEndItem.id);
+                    GNGOutputHandler.StopTimer("GNG", gng.frontEndItem.id);
                 }
             }
             gng.LoadNextTest();

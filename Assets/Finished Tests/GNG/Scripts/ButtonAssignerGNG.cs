@@ -37,7 +37,7 @@ public class ButtonAssignerGNG : MonoBehaviour
             if (!gng.frontEndItem.isExample)
             {
                 c[0].hitTimes++;
-                GNGOutputHandler.StopTimer("CPT", gng.frontEndItem.id);
+                GNGOutputHandler.StopTimer("GNG", gng.frontEndItem.id);
             }
         }
         else

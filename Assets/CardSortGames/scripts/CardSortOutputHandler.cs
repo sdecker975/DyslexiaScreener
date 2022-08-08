@@ -38,15 +38,9 @@ public class CardSortOutputHandler : OutputHandler {
         if (InternetAvailable.internetAvailableStatic)
         {
             string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')",
-                                            Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy/M/d HH:mm:ss"));
+                                            Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime));
             print(values);
-            string command = "";
-            if (testAbbrev.Equals("CSC"))
-                command = "insert into CARE1.UNIVERSAL (exam_type, id, test_id, item_id, correctness, reaction_time, dot) values " + values;
-            else if (testAbbrev.Equals("CSS"))
-                command = "insert into CARE1.UNIVERSAL (exam_type, id, test_id, item_id, correctness, reaction_time, dot) values " + values;
-            else
-                command = "insert into CARE1.UNIVERSAL (exam_type, id, test_id, item_id, correctness, reaction_time, dot) values " + values;
+            string command = "insert into CollectedData.CardSort1 (exam_type, student_id, test_id, item_id, correctness, reaction_time) values " + values; ;
             print(command);
             ScoreReports.SaveToCSVLocalData(testAbbrev, values);
 

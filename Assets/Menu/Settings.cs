@@ -894,6 +894,16 @@ public class Settings : MonoBehaviour
         string command = values + " where test_num = " + testID;
         print(command);
         SQLHandler.RunCommand(command);
+
+        for (int i = 0; i < SceneHandler.abbrevs.Length; i++)
+        {
+            if (SceneHandler.sceneActive[i])
+            {
+                string values2 = string.Format("values ('{0}', '{1}', '{2}', '{3}'); ", studentID, testID, SceneHandler.abbrevs[i], 9);
+                string command2 = "insert into university.student_test_info (student_id, test_num, test_type, result) " + values;
+                SQLHandler.RunCommand(command2);
+            }
+        }
     }
 
     // Use this for initialization
