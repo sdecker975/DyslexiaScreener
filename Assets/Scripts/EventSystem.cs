@@ -225,6 +225,7 @@ public class EventSystem : MonoBehaviour {
                 else
                 {
                     totalLooped = 0;
+                    SQLHandler.UpdateTest(5);
                     SceneHandler.GoToNextScene();
                 }
                 //testHandler.currentTestNumber = e.loopTo;

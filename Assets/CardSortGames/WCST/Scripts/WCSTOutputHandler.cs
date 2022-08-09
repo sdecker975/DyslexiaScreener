@@ -11,7 +11,7 @@ public class WCSTOutputHandler : OutputHandler {
             string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}','{10}')",
                                        17, Settings.studentID, Settings.testID, "WCST" + System.Convert.ToString(itemNum), correct ? 1 : 0, perseveration ? "P" : "NP", timer, currRule, prevRule, sortRule, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy/M/d HH:mm:ss"));
 
-            string command = "insert into CollectedData.CardSort2 (exam_type, student_id, test_id, item_id, correctness, perseveration, reaction_time, current_rule, previous_rule, sort_rule, dot) values " + values;
+            string command = "insert into university.CardSort2 (exam_type, student_id, test_id, item_id, correctness, perseveration, reaction_time, current_rule, previous_rule, sort_rule, dot) values " + values;
 
             ScoreReports.SaveToCSVLocalData(testAbbrev, values);
 

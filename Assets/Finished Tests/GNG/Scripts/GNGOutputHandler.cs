@@ -41,7 +41,7 @@ public class GNGOutputHandler : OutputHandler
             string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')",
            Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), FindObjectOfType<ClickCardGNG>().hitTimes);
 
-            string command = "insert into CollectedData.GoNoGo (student_id, test_id, item_id, correctness, reaction_time, hit_num) values " + values;
+            string command = "insert into university.GoNoGo (student_id, test_id, item_id, correctness, reaction_time, hit_num) values " + values;
 
             ScoreReports.SaveToCSVLocalData("GNG", values);
 
