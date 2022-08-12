@@ -98,4 +98,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/quit.unity
     guid: f9ebb3d385b62ed4899ab01c0e1c3b85
+  - enabled: 1
+    path: Assets/Finished Tests/Word ID Spanish/WIS.unity
+    guid: 45042038baab86b478d49cc1c1e26935
+  - enabled: 1
+    path: Assets/Bender/Scenes/drawRetention.unity
+    guid: 4b1ca4172d5b2c9488d5586c6d011e42
   m_configObjects: {}

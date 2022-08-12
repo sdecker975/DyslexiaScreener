@@ -35,9 +35,18 @@ public class RYMOutputHandler : OutputHandler
         {
             print(responseName);
 
-            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}')",
-                                            Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), responsePosition, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
-            string command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, select_pos, dot) values " + values;
+            if(responsePosition == 1)
+            {
+                responseName = "Rhymes";
+            } else
+            {
+                responseName = "Not Rhymes";
+            }
+            
+
+            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}', '{8}')",
+                                            Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, correct ? 1 : 0, (timer.ElapsedMilliseconds / 1000f - delayTime), responsePosition, responseName, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
+            string command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, select_pos, select_name, dot) values " + values;
 
             ScoreReports.SaveToCSVLocalData("RYM", values);
 

@@ -47,9 +47,13 @@ public class SeqLangOutputHandler : OutputHandler {
         {
             string[] data = dataToArray();
 
-            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}')",
-                                             Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, points, reactionTime, correctSeq, userSeq, correctOrder, userOrder, System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
-            string command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, correct_seq, user_seq, correct_order, user_order, dot) values " + values;
+            //selectName is the order of boxes concatenated with the order of shapes (the shape number is the position in the array on the item front end)
+            // the top two shapes (on items with two rows) are the 4th and 5th positions (it goes bottom left (0) -> top right (5))
+            string[] selectName = { "_", userOrder, "_", userSeq };
+
+            string values = string.Format("('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')",
+                                             Camera.main.GetComponent<TestHandler>().testNumber, Settings.studentID, Settings.testID, itemID, points, reactionTime, "Not Applicable", string.Join("",selectName), System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd"));
+            string command = "insert into university.exam_results (exam_type, student_id, test_id, item_id, correctness, reaction_time, select_pos, select_name, dot) values " + values;
 
             ScoreReports.SaveToCSVLocalData("SLC", values);
 

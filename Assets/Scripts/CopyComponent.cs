@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class CopyComponent : MonoBehaviour
 {
-
-    public WITestHandler primary;
-    public GNGTestHandler secondary;
+    public WISTestHandler primary;
+    public WISTestHandler secondary;
 
     public GameObject box;
 
@@ -21,11 +20,11 @@ public class CopyComponent : MonoBehaviour
         print(primary.testItemBackEnd.Count);
         secondary.testItemBackEnd = primary.testItemBackEnd;
 
-        secondary.testItemFrontEnd = new List<GNGTestItem>();
+        secondary.testItemFrontEnd = new List<WISTestItem>();
 
-        foreach (WITestItem lw in primary.testItemFrontEnd)
+        foreach (WISTestItem lw in primary.testItemFrontEnd)
         {
-            GNGTestItem ls = new GNGTestItem();
+            WISTestItem ls = new WISTestItem();
             ls.pos = lw.pos;
             ls.id = lw.id;
             ls.isExample = lw.isExample;
@@ -41,8 +40,10 @@ public class CopyComponent : MonoBehaviour
                 }
             }
             ls.LetterButtons = buttons;
+            ls.displayedText = lw.displayedText;
             ls.sentenceBox = lw.sentenceBox;
             secondary.testItemFrontEnd.Add(ls);
         }
     }
+    
 }

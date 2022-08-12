@@ -38,8 +38,8 @@ public class VisualSearchClick : MonoBehaviour {
         if (e == EventSystem.typeOfEvent.Mouse)
         {
             VISOutputHandler.correctness = isCorrect;
-            VISOutputHandler.position = x + "-" + y;
-            VISOutputHandler.content = gameObject.name;
+            VISOutputHandler.position = "_" + x.ToString() + "_" + y.ToString();
+            VISOutputHandler.content = gameObject.name + "_" + gameObject.transform.GetChild(0).localEulerAngles[2].ToString().Replace(".0","");
 
             if (vis.frontEndItem.isExample)
             {

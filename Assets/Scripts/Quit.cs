@@ -4,12 +4,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using System;
 using System.IO;
+using System.Threading;
 
 public class Quit : MonoBehaviour {
 
     public GameObject pauseScreen;
     List<GameObject> pausedObjects = new List<GameObject>();
-
     // Use this for initialization
     void Start()
     {
@@ -163,5 +163,6 @@ public class Quit : MonoBehaviour {
                 OutputHandler.ResetValues();
             }
         }
+        Thread.Sleep(1000);
     }
 }
