@@ -56,6 +56,7 @@ public class LoginScript : MonoBehaviour {
         system = UnityEngine.EventSystems.EventSystem.current;
         incorrectLoginText.text = "";
         
+        StartCoroutine(CheckInternetConnection());
         SQLHandler.MakeConnection();
         //GetPHPRequest("ayanmitra", "$2y$10$qGDDKK2AVplLeX5Iixy90.ZVpC186MLw3mq7gO8PteaULnUZSHYnG");
     }
@@ -118,12 +119,12 @@ public class LoginScript : MonoBehaviour {
             if (SQLHandler.pushingStack.Count != 0) {
                 SQLHandler.CheckConnection();
                 SQLHandler.RunCommand(SQLHandler.pushingStack.Pop());
-                
             }
 
             StartCoroutine(PHPRequestRecievedCoroutine());
             
         } else {
+
             // offline mode
             var offlineUsername = user.text.Trim();
             var offlinePassword = password.text.Trim();
@@ -272,11 +273,12 @@ public class LoginScript : MonoBehaviour {
 
     private void Update() {
 
-        timerToCheckInternet -= Time.deltaTime;
-        if(timerToCheckInternet <= 0)
+        float wait = 1.0f;
+        wait -= Time.deltaTime;
+        if(wait <= 0)
         {
             StartCoroutine(CheckInternetConnection());
-            timerToCheckInternet = 2f;
+            wait = 2f;
         }
 
 

@@ -27,7 +27,6 @@ public class OVTestHandler : TestHandler
         base.mouseIsDone = false;
         
         SQLHandler.InsertTest();
-        SQLHandler.UpdateTest(8);
         CreateTest(frontEndItem);
     }
 

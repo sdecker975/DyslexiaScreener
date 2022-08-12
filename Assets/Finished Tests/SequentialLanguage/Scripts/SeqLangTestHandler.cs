@@ -21,7 +21,6 @@ public class SeqLangTestHandler : TestHandler
         setNextTestItem();
         base.mouseIsDone = false;
         SQLHandler.InsertTest();
-        SQLHandler.UpdateTest(8);
         CreateTest(frontEndItem);
     }
 

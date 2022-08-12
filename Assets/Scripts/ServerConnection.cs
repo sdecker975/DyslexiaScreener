@@ -11,7 +11,7 @@ public class ServerConnection : MonoBehaviour {
     public Image wifiImage;
     private float timerToCheckInternet = 2f;
 
-    //Thread connThread = new Thread(SQLHandler.CheckConnection);
+    Thread connThread = new Thread(SQLHandler.CheckConnection);
 
 	// Use this for initialization
 	void Start () {
@@ -23,18 +23,19 @@ public class ServerConnection : MonoBehaviour {
 	void Update () {
         timerToCheckInternet -= Time.deltaTime;
 
-        if (timerToCheckInternet <= 0)
+        if(timerToCheckInternet <= 0)
         {
             StartCoroutine(CheckInternetConnection());
+            SQLHandler.CheckConnection();
             timerToCheckInternet = 2f;
         }
-        /*
         if(!connThread.IsAlive)
         {
+            //print("Conn thread is:" + connThread.IsAlive.ToString());
             connThread = new Thread(SQLHandler.CheckConnection);
-            // connThread.Start();
+            connThread.Start();
         }
-
+        
 		if(SQLHandler.state)
         {
             //Color c = new Color();
@@ -47,9 +48,6 @@ public class ServerConnection : MonoBehaviour {
             //wifi.color = Color.red;
             wifiImage.gameObject.SetActive(true);
         }
-
-        */
-
     }
     IEnumerator CheckInternetConnection()
     {

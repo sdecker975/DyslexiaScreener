@@ -146,12 +146,12 @@ public class Settings : MonoBehaviour
     public void VerbalMemory(bool input)
     {
         VWM = input;
-        GameObject.Find("Canvas/Highlights/NF").SetActive(input);
+        GameObject.Find("Canvas/Highlights/VWM").SetActive(input);
     }
     public void VerbalMemoryBackwards(bool input)
     {
         VWMB = input;
-        GameObject.Find("Canvas/Highlights/NB").SetActive(input);
+        GameObject.Find("Canvas/Highlights/VWMB").SetActive(input);
     }
     public void VisualSearch(bool input)
     {
@@ -194,467 +194,90 @@ public class Settings : MonoBehaviour
 
     public void SetSettings1()
     {
-        if (!settings1)
-        {
-            settings1 = true;
-            if (settings1tests == null) settings1tests = new bool[23];
-            GameObject.Find("Canvas/Dots/Button 1/LI").SetActive(settings1tests[0] = LI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/LS").SetActive(settings1tests[1] = LSSI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/WI").SetActive(settings1tests[2] = LW_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/SI").SetActive(settings1tests[3] = SI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RF").SetActive(settings1tests[4] = RF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RC").SetActive(settings1tests[5] = RC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/OV").SetActive(settings1tests[6] = OV_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/OC").SetActive(settings1tests[7] = OC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/PM").SetActive(settings1tests[8] = PM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/SB").SetActive(settings1tests[9] = SB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RYM").SetActive(settings1tests[10] = RYM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RAN").SetActive(settings1tests[11] = RAN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RLNN").SetActive(settings1tests[12] = RLNNL_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RLNN").SetActive(settings1tests[13] = RLNNN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/RLNN").SetActive(settings1tests[14] = RLNNM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/LF").SetActive(settings1tests[15] = LF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/CS1").SetActive(settings1tests[16] = SO1_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/CS2").SetActive(settings1tests[17] = SO2_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/NF").SetActive(settings1tests[18] = VWM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/NB").SetActive(settings1tests[19] = VWMB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/VS").SetActive(settings1tests[20] = VIS_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/SL").SetActive(settings1tests[21] = SLC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 1/GNG").SetActive(settings1tests[22] = GNG_T.isOn);
-        }
-        else
-        {
-            LI_T.isOn = LI = settings1tests[0];
-            LSSI_T.isOn = LSSI = settings1tests[1];
-            LW_T.isOn = LW = settings1tests[2];
-            SI_T.isOn = SI = settings1tests[3];
-            RF_T.isOn = RF = settings1tests[4];
-            RC_T.isOn = RC = settings1tests[5];
-            OV_T.isOn = OV = settings1tests[6];
-            OC_T.isOn = OC = settings1tests[7];
-            PM_T.isOn = PM = settings1tests[8];
-            SB_T.isOn = SB = settings1tests[9];
-            RYM_T.isOn = RYM = settings1tests[10];
-            RAN_T.isOn = RAN = settings1tests[11];
-            RLNNL_T.isOn = RLNNL = settings1tests[12];
-            RLNNN_T.isOn = RLNNN = settings1tests[13];
-            RLNNM_T.isOn = RLNNM = settings1tests[14];
-            LF_T.isOn = LF = settings1tests[15];
-            SO1_T.isOn = SO1 = settings1tests[16];
-            SO2_T.isOn = SO2 = settings1tests[17];
-            VWM_T.isOn = VWM = settings1tests[18];
-            VWMB_T.isOn = VWMB = settings1tests[19];
-            VIS_T.isOn = VIS = settings1tests[20];
-            SLC_T.isOn = SLC = settings1tests[21];
-            GNG_T.isOn = GNG = settings1tests[22];
-        }
-    }
-
-    public void ResetSettings1()
-    {
-        settings1tests = new bool[23];
-        settings1 = false;
-        foreach (Transform child in GameObject.Find("Canvas/Dots/Button 1").transform)
-            child.gameObject.SetActive(false);
-    }
+        LI_T.isOn = LI = true;
+        LSSI_T.isOn = LSSI = true;
+        OV_T.isOn = OV = true;
+        SB_T.isOn = SB = true;
+        RYM_T.isOn = RYM = true;
+     }
 
     public void SetSettings2()
     {
-        if (!settings2)
-        {
-            settings2 = true;
-            if (settings2tests == null) settings2tests = new bool[23];
-            GameObject.Find("Canvas/Dots/Button 2/LI").SetActive(settings2tests[0] = LI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/LS").SetActive(settings2tests[1] = LSSI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/WI").SetActive(settings2tests[2] = LW_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/SI").SetActive(settings2tests[3] = SI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RF").SetActive(settings2tests[4] = RF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RC").SetActive(settings2tests[5] = RC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/OV").SetActive(settings2tests[6] = OV_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/OC").SetActive(settings2tests[7] = OC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/PM").SetActive(settings2tests[8] = PM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/SB").SetActive(settings2tests[9] = SB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RYM").SetActive(settings2tests[10] = RYM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RAN").SetActive(settings2tests[11] = RAN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RLNN").SetActive(settings2tests[12] = RLNNL_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RLNN").SetActive(settings2tests[13] = RLNNN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/RLNN").SetActive(settings2tests[14] = RLNNM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/LF").SetActive(settings2tests[15] = LF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/CS1").SetActive(settings2tests[16] = SO1_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/CS2").SetActive(settings2tests[17] = SO2_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/NF").SetActive(settings2tests[18] = VWM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/NB").SetActive(settings2tests[19] = VWMB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/VS").SetActive(settings2tests[20] = VIS_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/SL").SetActive(settings2tests[21] = SLC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 2/GNG").SetActive(settings2tests[22] = GNG_T.isOn);
-        }
-        else
-        {
-            LI_T.isOn = LI = settings2tests[0];
-            LSSI_T.isOn = LSSI = settings2tests[1];
-            LW_T.isOn = LW = settings2tests[2];
-            SI_T.isOn = SI = settings2tests[3];
-            RF_T.isOn = RF = settings2tests[4];
-            RC_T.isOn = RC = settings2tests[5];
-            OV_T.isOn = OV = settings2tests[6];
-            OC_T.isOn = OC = settings2tests[7];
-            PM_T.isOn = PM = settings2tests[8];
-            SB_T.isOn = SB = settings2tests[9];
-            RYM_T.isOn = RYM = settings2tests[10];
-            RAN_T.isOn = RAN = settings2tests[11];
-            RLNNL_T.isOn = RLNNL = settings2tests[12];
-            RLNNN_T.isOn = RLNNN = settings2tests[13];
-            RLNNM_T.isOn = RLNNM = settings2tests[14];
-            LF_T.isOn = LF = settings2tests[15];
-            SO1_T.isOn = SO1 = settings2tests[16];
-            SO2_T.isOn = SO2 = settings2tests[17];
-            VWM_T.isOn = VWM = settings2tests[18];
-            VWMB_T.isOn = VWMB = settings2tests[19];
-            VIS_T.isOn = VIS = settings2tests[20];
-            SLC_T.isOn = SLC = settings2tests[21];
-            GNG_T.isOn = GNG = settings2tests[22];
-        }
-    }
-
-    public void ResetSettings2()
-    {
-        settings2tests = new bool[23];
-        settings2 = false;
-        foreach (Transform child in GameObject.Find("Canvas/Dots/Button 2").transform)
-            child.gameObject.SetActive(false);
+        LW_T.isOn = LW = true;
+        SI_T.isOn = SI = true;
+        OC_T.isOn = OC = true;
+        SB_T.isOn = SB = true;
+        PM_T.isOn = PM = true;
+        VWM_T.isOn = VWM = true;
     }
 
     public void SetSettings3()
     {
-        if (!settings3)
-        {
-            settings3 = true;
-            if (settings3tests == null) settings3tests = new bool[23];
-            GameObject.Find("Canvas/Dots/Button 3/LI").SetActive(settings3tests[0] = LI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/LS").SetActive(settings3tests[1] = LSSI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/WI").SetActive(settings3tests[2] = LW_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/SI").SetActive(settings3tests[3] = SI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RF").SetActive(settings3tests[4] = RF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RC").SetActive(settings3tests[5] = RC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/OV").SetActive(settings3tests[6] = OV_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/OC").SetActive(settings3tests[7] = OC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/PM").SetActive(settings3tests[8] = PM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/SB").SetActive(settings3tests[9] = SB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RYM").SetActive(settings3tests[10] = RYM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RAN").SetActive(settings3tests[11] = RAN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RLNN").SetActive(settings3tests[12] = RLNNL_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RLNN").SetActive(settings3tests[13] = RLNNN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/RLNN").SetActive(settings3tests[14] = RLNNM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/LF").SetActive(settings3tests[15] = LF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/CS1").SetActive(settings3tests[16] = SO1_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/CS2").SetActive(settings3tests[17] = SO2_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/NF").SetActive(settings3tests[18] = VWM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/NB").SetActive(settings3tests[19] = VWMB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/VS").SetActive(settings3tests[20] = VIS_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/SL").SetActive(settings3tests[21] = SLC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 3/GNG").SetActive(settings3tests[22] = GNG_T.isOn);
-        }
-        else
-        {
-            LI_T.isOn = LI = settings3tests[0];
-            LSSI_T.isOn = LSSI = settings3tests[1];
-            LW_T.isOn = LW = settings3tests[2];
-            SI_T.isOn = SI = settings3tests[3];
-            RF_T.isOn = RF = settings3tests[4];
-            RC_T.isOn = RC = settings3tests[5];
-            OV_T.isOn = OV = settings3tests[6];
-            OC_T.isOn = OC = settings3tests[7];
-            PM_T.isOn = PM = settings3tests[8];
-            SB_T.isOn = SB = settings3tests[9];
-            RYM_T.isOn = RYM = settings3tests[10];
-            RAN_T.isOn = RAN = settings3tests[11];
-            RLNNL_T.isOn = RLNNL = settings3tests[12];
-            RLNNN_T.isOn = RLNNN = settings3tests[13];
-            RLNNM_T.isOn = RLNNM = settings3tests[14];
-            LF_T.isOn = LF = settings3tests[15];
-            SO1_T.isOn = SO1 = settings3tests[16];
-            SO2_T.isOn = SO2 = settings3tests[17];
-            VWM_T.isOn = VWM = settings3tests[18];
-            VWMB_T.isOn = VWMB = settings3tests[19];
-            VIS_T.isOn = VIS = settings3tests[20];
-            SLC_T.isOn = SLC = settings3tests[21];
-            GNG_T.isOn = GNG = settings3tests[22];
-        }
-    }
-
-    public void ResetSettings3()
-    {
-        settings3tests = new bool[23];
-        settings3 = false;
-        foreach (Transform child in GameObject.Find("Canvas/Dots/Button 3").transform)
-            child.gameObject.SetActive(false);
+        RF_T.isOn = RF = true;
+        RC_T.isOn = RC = true;
+        VWMB_T.isOn = VWMB = true;
+        SLC_T.isOn = SLC = true;
     }
 
     public void SetSettings4()
     {
-        if (!settings4)
-        {
-            settings4 = true;
-            if (settings4tests == null) settings4tests = new bool[23];
-            GameObject.Find("Canvas/Dots/Button 4/LI").SetActive(settings4tests[0] = LI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/LS").SetActive(settings4tests[1] = LSSI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/WI").SetActive(settings4tests[2] = LW_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/SI").SetActive(settings4tests[3] = SI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RF").SetActive(settings4tests[4] = RF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RC").SetActive(settings4tests[5] = RC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/OV").SetActive(settings4tests[6] = OV_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/OC").SetActive(settings4tests[7] = OC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/PM").SetActive(settings4tests[8] = PM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/SB").SetActive(settings4tests[9] = SB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RYM").SetActive(settings4tests[10] = RYM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RAN").SetActive(settings4tests[11] = RAN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RLNN").SetActive(settings4tests[12] = RLNNL_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RLNN").SetActive(settings4tests[13] = RLNNN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/RLNN").SetActive(settings4tests[14] = RLNNM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/LF").SetActive(settings4tests[15] = LF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/CS1").SetActive(settings4tests[16] = SO1_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/CS2").SetActive(settings4tests[17] = SO2_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/NF").SetActive(settings4tests[18] = VWM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/NB").SetActive(settings4tests[19] = VWMB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/VS").SetActive(settings4tests[20] = VIS_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/SL").SetActive(settings4tests[21] = SLC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 4/GNG").SetActive(settings4tests[22] = GNG_T.isOn);
-        }
-        else
-        {
-            LI_T.isOn = LI = settings4tests[0];
-            LSSI_T.isOn = LSSI = settings4tests[1];
-            LW_T.isOn = LW = settings4tests[2];
-            SI_T.isOn = SI = settings4tests[3];
-            RF_T.isOn = RF = settings4tests[4];
-            RC_T.isOn = RC = settings4tests[5];
-            OV_T.isOn = OV = settings4tests[6];
-            OC_T.isOn = OC = settings4tests[7];
-            PM_T.isOn = PM = settings4tests[8];
-            SB_T.isOn = SB = settings4tests[9];
-            RYM_T.isOn = RYM = settings4tests[10];
-            RAN_T.isOn = RAN = settings4tests[11];
-            RLNNL_T.isOn = RLNNL = settings4tests[12];
-            RLNNN_T.isOn = RLNNN = settings4tests[13];
-            RLNNM_T.isOn = RLNNM = settings4tests[14];
-            LF_T.isOn = LF = settings4tests[15];
-            SO1_T.isOn = SO1 = settings4tests[16];
-            SO2_T.isOn = SO2 = settings4tests[17];
-            VWM_T.isOn = VWM = settings4tests[18];
-            VWMB_T.isOn = VWMB = settings4tests[19];
-            VIS_T.isOn = VIS = settings4tests[20];
-            SLC_T.isOn = SLC = settings4tests[21];
-            GNG_T.isOn = GNG = settings4tests[22];
-        }
+        SO1_T.isOn = SO1 = true;
+        SO2_T.isOn = SO2 = true;
+        VIS_T.isOn = VIS = true;
+        GNG_T.isOn = GNG = true;
     }
-
-    public void ResetSettings4()
-    {
-        settings4tests = new bool[23];
-        settings4 = false;
-        foreach (Transform child in GameObject.Find("Canvas/Dots/Button 4").transform)
-            child.gameObject.SetActive(false);
-    }
-
     public void SetSettings5()
     {
-        if (!settings5)
-        {
-            settings5 = true;
-            if (settings5tests == null) settings5tests = new bool[23];
-            GameObject.Find("Canvas/Dots/Button 5/LI").SetActive(settings5tests[0] = LI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/LS").SetActive(settings5tests[1] = LSSI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/WI").SetActive(settings5tests[2] = LW_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/SI").SetActive(settings5tests[3] = SI_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RF").SetActive(settings5tests[4] = RF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RC").SetActive(settings5tests[5] = RC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/OV").SetActive(settings5tests[6] = OV_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/OC").SetActive(settings5tests[7] = OC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/PM").SetActive(settings5tests[8] = PM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/SB").SetActive(settings5tests[9] = SB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RYM").SetActive(settings5tests[10] = RYM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RAN").SetActive(settings5tests[11] = RAN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RLNN").SetActive(settings5tests[12] = RLNNL_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RLNN").SetActive(settings5tests[13] = RLNNN_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/RLNN").SetActive(settings5tests[14] = RLNNM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/LF").SetActive(settings5tests[15] = LF_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/CS1").SetActive(settings5tests[16] = SO1_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/CS2").SetActive(settings5tests[17] = SO2_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/NF").SetActive(settings5tests[18] = VWM_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/NB").SetActive(settings5tests[19] = VWMB_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/VS").SetActive(settings5tests[20] = VIS_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/SL").SetActive(settings5tests[21] = SLC_T.isOn);
-            GameObject.Find("Canvas/Dots/Button 5/GNG").SetActive(settings5tests[22] = GNG_T.isOn);
-        }
-        else
-        {
-            LI_T.isOn = LI = settings5tests[0];
-            LSSI_T.isOn = LSSI = settings5tests[1];
-            LW_T.isOn = LW = settings5tests[2];
-            SI_T.isOn = SI = settings5tests[3];
-            RF_T.isOn = RF = settings5tests[4];
-            RC_T.isOn = RC = settings5tests[5];
-            OV_T.isOn = OV = settings5tests[6];
-            OC_T.isOn = OC = settings5tests[7];
-            PM_T.isOn = PM = settings5tests[8];
-            SB_T.isOn = SB = settings5tests[9];
-            RYM_T.isOn = RYM = settings5tests[10];
-            RAN_T.isOn = RAN = settings5tests[11];
-            RLNNL_T.isOn = RLNNL = settings5tests[12];
-            RLNNN_T.isOn = RLNNN = settings5tests[13];
-            RLNNM_T.isOn = RLNNM = settings5tests[14];
-            LF_T.isOn = LF = settings5tests[15];
-            SO1_T.isOn = SO1 = settings5tests[16];
-            SO2_T.isOn = SO2 = settings5tests[17];
-            VWM_T.isOn = VWM = settings5tests[18];
-            VWMB_T.isOn = VWMB = settings5tests[19];
-            VIS_T.isOn = VIS = settings5tests[20];
-            SLC_T.isOn = SLC = settings5tests[21];
-            GNG_T.isOn = GNG = settings5tests[22];
-        }
+        LI_T.isOn = LI = true;
+        LSSI_T.isOn = LSSI = true;
+        LW_T.isOn = LW = true;
+        SI_T.isOn = SI = true;
+        RF_T.isOn = RF = true;
+        RC_T.isOn = RC = true;
+        OV_T.isOn = OV = true;
+        OC_T.isOn = OC = true;
+        PM_T.isOn = PM = true;
+        SB_T.isOn = SB = true;
+        RYM_T.isOn = RYM = true;
+        RAN_T.isOn = RAN = true;
+        RLNNL_T.isOn = RLNNL = true;
+        RLNNN_T.isOn = RLNNN = true;
+        RLNNM_T.isOn = RLNNM = true;
+        LF_T.isOn = LF = true;
+        SO1_T.isOn = SO1 = true;
+        SO2_T.isOn = SO2 = true;
+        VWM_T.isOn = VWM = true;
+        VWMB_T.isOn = VWMB = true;
+        VIS_T.isOn = VIS = true;
+        SLC_T.isOn = SLC = true;
+        GNG_T.isOn = GNG = true;
     }
 
-    public void ResetSettings5()
+    public void ResetSettings()
     {
-        settings5tests = new bool[23];
-        settings5 = false;
-        foreach (Transform child in GameObject.Find("Canvas/Dots/Button 5").transform)
-            child.gameObject.SetActive(false);
-    }
-
-    public void SetSettingsAtStart()
-    {
-        if (settings1)
-        {
-            GameObject.Find("Canvas/Dots/Button 1/LI").SetActive(settings1tests[0]);
-            GameObject.Find("Canvas/Dots/Button 1/LS").SetActive(settings1tests[1]);
-            GameObject.Find("Canvas/Dots/Button 1/WI").SetActive(settings1tests[2]);
-            GameObject.Find("Canvas/Dots/Button 1/SI").SetActive(settings1tests[3]);
-            GameObject.Find("Canvas/Dots/Button 1/RF").SetActive(settings1tests[4]);
-            GameObject.Find("Canvas/Dots/Button 1/RC").SetActive(settings1tests[5]);
-            GameObject.Find("Canvas/Dots/Button 1/OV").SetActive(settings1tests[6]);
-            GameObject.Find("Canvas/Dots/Button 1/OC").SetActive(settings1tests[7]);
-            GameObject.Find("Canvas/Dots/Button 1/PM").SetActive(settings1tests[8]);
-            GameObject.Find("Canvas/Dots/Button 1/SB").SetActive(settings1tests[9]);
-            GameObject.Find("Canvas/Dots/Button 1/RYM").SetActive(settings1tests[10]);
-            GameObject.Find("Canvas/Dots/Button 1/RAN").SetActive(settings1tests[11]);
-            GameObject.Find("Canvas/Dots/Button 1/RLNN").SetActive(settings1tests[12]);
-            GameObject.Find("Canvas/Dots/Button 1/RLNN").SetActive(settings1tests[13]);
-            GameObject.Find("Canvas/Dots/Button 1/RLNN").SetActive(settings1tests[14]);
-            GameObject.Find("Canvas/Dots/Button 1/LF").SetActive(settings1tests[15]);
-            GameObject.Find("Canvas/Dots/Button 1/CS1").SetActive(settings1tests[16]);
-            GameObject.Find("Canvas/Dots/Button 1/CS2").SetActive(settings1tests[17]);
-            GameObject.Find("Canvas/Dots/Button 1/NF").SetActive(settings1tests[18]);
-            GameObject.Find("Canvas/Dots/Button 1/NB").SetActive(settings1tests[19]);
-            GameObject.Find("Canvas/Dots/Button 1/VS").SetActive(settings1tests[20]);
-            GameObject.Find("Canvas/Dots/Button 1/SL").SetActive(settings1tests[21]);
-            GameObject.Find("Canvas/Dots/Button 1/GNG").SetActive(settings1tests[22]);
-
-        }
-        if (settings2)
-        {
-            GameObject.Find("Canvas/Dots/Button 2/LI").SetActive(settings2tests[0]);
-            GameObject.Find("Canvas/Dots/Button 2/LS").SetActive(settings2tests[1]);
-            GameObject.Find("Canvas/Dots/Button 2/WI").SetActive(settings2tests[2]);
-            GameObject.Find("Canvas/Dots/Button 2/SI").SetActive(settings2tests[3]);
-            GameObject.Find("Canvas/Dots/Button 2/RF").SetActive(settings2tests[4]);
-            GameObject.Find("Canvas/Dots/Button 2/RC").SetActive(settings2tests[5]);
-            GameObject.Find("Canvas/Dots/Button 2/OV").SetActive(settings2tests[6]);
-            GameObject.Find("Canvas/Dots/Button 2/OC").SetActive(settings2tests[7]);
-            GameObject.Find("Canvas/Dots/Button 2/PM").SetActive(settings2tests[8]);
-            GameObject.Find("Canvas/Dots/Button 2/SB").SetActive(settings2tests[9]);
-            GameObject.Find("Canvas/Dots/Button 2/RYM").SetActive(settings2tests[10]);
-            GameObject.Find("Canvas/Dots/Button 2/RAN").SetActive(settings2tests[11]);
-            GameObject.Find("Canvas/Dots/Button 2/RLNN").SetActive(settings2tests[12]);
-            GameObject.Find("Canvas/Dots/Button 2/RLNN").SetActive(settings2tests[13]);
-            GameObject.Find("Canvas/Dots/Button 2/RLNN").SetActive(settings2tests[14]);
-            GameObject.Find("Canvas/Dots/Button 2/LF").SetActive(settings2tests[15]);
-            GameObject.Find("Canvas/Dots/Button 2/CS1").SetActive(settings2tests[16]);
-            GameObject.Find("Canvas/Dots/Button 2/CS2").SetActive(settings2tests[17]);
-            GameObject.Find("Canvas/Dots/Button 2/NF").SetActive(settings2tests[18]);
-            GameObject.Find("Canvas/Dots/Button 2/NB").SetActive(settings2tests[19]);
-            GameObject.Find("Canvas/Dots/Button 2/VS").SetActive(settings2tests[20]);
-            GameObject.Find("Canvas/Dots/Button 2/SL").SetActive(settings2tests[21]);
-            GameObject.Find("Canvas/Dots/Button 2/GNG").SetActive(settings2tests[22]);
-        }
-        if (settings3)
-        {
-            GameObject.Find("Canvas/Dots/Button 3/LI").SetActive(settings3tests[0]);
-            GameObject.Find("Canvas/Dots/Button 3/LS").SetActive(settings3tests[1]);
-            GameObject.Find("Canvas/Dots/Button 3/WI").SetActive(settings3tests[2]);
-            GameObject.Find("Canvas/Dots/Button 3/SI").SetActive(settings3tests[3]);
-            GameObject.Find("Canvas/Dots/Button 3/RF").SetActive(settings3tests[4]);
-            GameObject.Find("Canvas/Dots/Button 3/RC").SetActive(settings3tests[5]);
-            GameObject.Find("Canvas/Dots/Button 3/OV").SetActive(settings3tests[6]);
-            GameObject.Find("Canvas/Dots/Button 3/OC").SetActive(settings3tests[7]);
-            GameObject.Find("Canvas/Dots/Button 3/PM").SetActive(settings3tests[8]);
-            GameObject.Find("Canvas/Dots/Button 3/SB").SetActive(settings3tests[9]);
-            GameObject.Find("Canvas/Dots/Button 3/RYM").SetActive(settings3tests[10]);
-            GameObject.Find("Canvas/Dots/Button 3/RAN").SetActive(settings3tests[11]);
-            GameObject.Find("Canvas/Dots/Button 3/RLNN").SetActive(settings3tests[12]);
-            GameObject.Find("Canvas/Dots/Button 3/RLNN").SetActive(settings3tests[13]);
-            GameObject.Find("Canvas/Dots/Button 3/RLNN").SetActive(settings3tests[14]);
-            GameObject.Find("Canvas/Dots/Button 3/LF").SetActive(settings3tests[15]);
-            GameObject.Find("Canvas/Dots/Button 3/CS1").SetActive(settings3tests[16]);
-            GameObject.Find("Canvas/Dots/Button 3/CS2").SetActive(settings3tests[17]);
-            GameObject.Find("Canvas/Dots/Button 3/NF").SetActive(settings3tests[18]);
-            GameObject.Find("Canvas/Dots/Button 3/NB").SetActive(settings3tests[19]);
-            GameObject.Find("Canvas/Dots/Button 3/VS").SetActive(settings3tests[20]);
-            GameObject.Find("Canvas/Dots/Button 3/SL").SetActive(settings3tests[21]);
-            GameObject.Find("Canvas/Dots/Button 3/GNG").SetActive(settings3tests[22]);
-        }
-        if (settings4)
-        {
-            GameObject.Find("Canvas/Dots/Button 4/LI").SetActive(settings4tests[0]);
-            GameObject.Find("Canvas/Dots/Button 4/LS").SetActive(settings4tests[1]);
-            GameObject.Find("Canvas/Dots/Button 4/WI").SetActive(settings4tests[2]);
-            GameObject.Find("Canvas/Dots/Button 4/SI").SetActive(settings4tests[3]);
-            GameObject.Find("Canvas/Dots/Button 4/RF").SetActive(settings4tests[4]);
-            GameObject.Find("Canvas/Dots/Button 4/RC").SetActive(settings4tests[5]);
-            GameObject.Find("Canvas/Dots/Button 4/OV").SetActive(settings4tests[6]);
-            GameObject.Find("Canvas/Dots/Button 4/OC").SetActive(settings4tests[7]);
-            GameObject.Find("Canvas/Dots/Button 4/PM").SetActive(settings4tests[8]);
-            GameObject.Find("Canvas/Dots/Button 4/SB").SetActive(settings4tests[9]);
-            GameObject.Find("Canvas/Dots/Button 4/RYM").SetActive(settings4tests[10]);
-            GameObject.Find("Canvas/Dots/Button 4/RAN").SetActive(settings4tests[11]);
-            GameObject.Find("Canvas/Dots/Button 4/RLNN").SetActive(settings4tests[12]);
-            GameObject.Find("Canvas/Dots/Button 4/RLNN").SetActive(settings4tests[13]);
-            GameObject.Find("Canvas/Dots/Button 4/RLNN").SetActive(settings4tests[14]);
-            GameObject.Find("Canvas/Dots/Button 4/LF").SetActive(settings4tests[15]);
-            GameObject.Find("Canvas/Dots/Button 4/CS1").SetActive(settings4tests[16]);
-            GameObject.Find("Canvas/Dots/Button 4/CS2").SetActive(settings4tests[17]);
-            GameObject.Find("Canvas/Dots/Button 4/NF").SetActive(settings4tests[18]);
-            GameObject.Find("Canvas/Dots/Button 4/NB").SetActive(settings4tests[19]);
-            GameObject.Find("Canvas/Dots/Button 4/VS").SetActive(settings4tests[20]);
-            GameObject.Find("Canvas/Dots/Button 4/SL").SetActive(settings4tests[21]);
-            GameObject.Find("Canvas/Dots/Button 4/GNG").SetActive(settings4tests[22]);
-        }
-        if (settings5)
-        {
-            GameObject.Find("Canvas/Dots/Button 5/LI").SetActive(settings5tests[0]);
-            GameObject.Find("Canvas/Dots/Button 5/LS").SetActive(settings5tests[1]);
-            GameObject.Find("Canvas/Dots/Button 5/WI").SetActive(settings5tests[2]);
-            GameObject.Find("Canvas/Dots/Button 5/SI").SetActive(settings5tests[3]);
-            GameObject.Find("Canvas/Dots/Button 5/RF").SetActive(settings5tests[4]);
-            GameObject.Find("Canvas/Dots/Button 5/RC").SetActive(settings5tests[5]);
-            GameObject.Find("Canvas/Dots/Button 5/OV").SetActive(settings5tests[6]);
-            GameObject.Find("Canvas/Dots/Button 5/OC").SetActive(settings5tests[7]);
-            GameObject.Find("Canvas/Dots/Button 5/PM").SetActive(settings5tests[8]);
-            GameObject.Find("Canvas/Dots/Button 5/SB").SetActive(settings5tests[9]);
-            GameObject.Find("Canvas/Dots/Button 5/RYM").SetActive(settings5tests[10]);
-            GameObject.Find("Canvas/Dots/Button 5/RAN").SetActive(settings5tests[11]);
-            GameObject.Find("Canvas/Dots/Button 5/RLNN").SetActive(settings5tests[12]);
-            GameObject.Find("Canvas/Dots/Button 5/RLNN").SetActive(settings5tests[13]);
-            GameObject.Find("Canvas/Dots/Button 5/RLNN").SetActive(settings5tests[14]);
-            GameObject.Find("Canvas/Dots/Button 5/LF").SetActive(settings5tests[15]);
-            GameObject.Find("Canvas/Dots/Button 5/CS1").SetActive(settings5tests[16]);
-            GameObject.Find("Canvas/Dots/Button 5/CS2").SetActive(settings5tests[17]);
-            GameObject.Find("Canvas/Dots/Button 5/NF").SetActive(settings5tests[18]);
-            GameObject.Find("Canvas/Dots/Button 5/NB").SetActive(settings5tests[19]);
-            GameObject.Find("Canvas/Dots/Button 5/VS").SetActive(settings5tests[20]);
-            GameObject.Find("Canvas/Dots/Button 5/SL").SetActive(settings5tests[21]);
-            GameObject.Find("Canvas/Dots/Button 5/GNG").SetActive(settings5tests[22]);
-        }
+        LI_T.isOn = LI = false;
+        LSSI_T.isOn = LSSI = false;
+        LW_T.isOn = LW = false;
+        SI_T.isOn = SI = false;
+        RF_T.isOn = RF = false;
+        RC_T.isOn = RC = false;
+        OV_T.isOn = OV = false;
+        OC_T.isOn = OC = false;
+        PM_T.isOn = PM = false;
+        SB_T.isOn = SB = false;
+        RYM_T.isOn = RYM = false;
+        RAN_T.isOn = RAN = false;
+        RLNNL_T.isOn = RLNNL = false;
+        RLNNN_T.isOn = RLNNN = false;
+        RLNNM_T.isOn = RLNNM = false;
+        LF_T.isOn = LF = false;
+        SO1_T.isOn = SO1 = false;
+        SO2_T.isOn = SO2 = false;
+        VWM_T.isOn = VWM = false;
+        VWMB_T.isOn = VWMB = false;
+        VIS_T.isOn = VIS = false;
+        SLC_T.isOn = SLC = false;
+        GNG_T.isOn = GNG = false;
     }
 
     public void NoPermissions()
@@ -909,6 +532,7 @@ public class Settings : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        SQLHandler.CheckConnection();
         testToggles.AddRange(new Toggle[] { LI_T, LSSI_T, LW_T, SI_T, RF_T, RC_T, OV_T, OC_T, PM_T, SB_T, RYM_T, RAN_T, RLNNL_T, RLNNN_T, RLNNM_T, LF_T,
         SO1_T, SO2_T, VWM_T, VWMB_T, VIS_T, SLC_T, GNG_T});
 
@@ -917,18 +541,18 @@ public class Settings : MonoBehaviour
         {
             NoPermissions();
         }
-        if (InternetAvailable.internetAvailableStatic)
+        //Michael changed this to SQLHandler.State instead of internet reachability since the database is what matters?
+        if (Application.internetReachability != NetworkReachability.NotReachable && SQLHandler.state)
         {
             FillDropdown();
             FillDropDownStudents();
-        }/*
+        }
         else
         {
+            studentIDs.Add("Database Not Connected");
             dropDown.SetActive(false);
             dropDownStudents.SetActive(false);
         }
-        */
-        SetSettingsAtStart();
         SceneHandler.currScene = 0;
 
         if (dateTime.Equals(""))
@@ -939,7 +563,7 @@ public class Settings : MonoBehaviour
     {
         if (teachers.value != currentTeacher)
         {
-            if (InternetAvailable.internetAvailableStatic)
+            if (SQLHandler.state)
             {
                 FillDropDownStudents();
             }

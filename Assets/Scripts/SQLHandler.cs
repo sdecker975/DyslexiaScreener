@@ -55,14 +55,6 @@ public class SQLHandler : MonoBehaviour {
     {
         //wait until this is called max_counter times (150)
         //when that happens check to see if we have a connection (maybe find a simple command)
-        //
-        if(counter >= max_counter)
-        {
-            //probably change
-            RunCommand("select id from CARE1.students limit 1");
-            counter = 0;
-        }
-        counter++;
         if (conn.State != System.Data.ConnectionState.Open)
         {
             MakeConnection();
@@ -104,6 +96,7 @@ public class SQLHandler : MonoBehaviour {
             if(!command.Equals("select id from CARE1.students limit 1"))
             {
                 pushingStack.Push(command);
+                Debug.Log("this command was not run:" + command);
                 //print(pushingStack.Peek());
                 //print(pushingStack.Count);
             }
@@ -148,7 +141,7 @@ public class SQLHandler : MonoBehaviour {
     {
         if (InternetAvailable.internetAvailableStatic)
         {
-            string command = "insert into university.student_test_info (test_num, student_id, date_of_testing, test_type, result) values (" + Settings.testID + ", '" + Settings.studentID + "', '" + System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd HH:mm:ss") + "', '" + Camera.main.GetComponent<TestHandler>().testAbbrev + "'," + "9)";
+            string command = "insert into university.student_test_info (test_num, student_id, date_of_testing, test_type, result) values (" + Settings.testID + ", '" + Settings.studentID + "', '" + System.DateTime.Parse(Settings.DateTimeM).ToString("yyyy-MM-dd HH:mm:ss") + "', '" + Camera.main.GetComponent<TestHandler>().testAbbrev + "'," + "8)";
             print(command);
             RunCommand(command);
         }

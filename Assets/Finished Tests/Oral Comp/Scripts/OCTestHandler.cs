@@ -25,7 +25,6 @@ public class OCTestHandler : TestHandler
         setNextTestItem();
         base.mouseIsDone = false;
         SQLHandler.InsertTest();
-        SQLHandler.UpdateTest(8);
         CreateTest(frontEndItem);
     }
 
