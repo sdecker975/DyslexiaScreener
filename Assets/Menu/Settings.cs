@@ -46,6 +46,9 @@ public class Settings : MonoBehaviour
     public static bool SO1, SO2, VWM, VWMB, VIS, SLC, GNG;
     public Toggle SO1_T, SO2_T, VWM_T, VWMB_T, VIS_T, SLC_T, GNG_T;
 
+    //Bender Drawing
+    public static bool BG = true;
+
     public static bool research;
     public Toggle research_T;
     public static bool report, raw, email, harddrive, xlsx;
@@ -314,6 +317,7 @@ public class Settings : MonoBehaviour
         SLC_T.enabled = false;
         GNG_T.enabled = false;
         WIS_T.enabled = false;
+        BG = false;
         report_T.enabled = false;
         raw_T.enabled = false;
         email_T.enabled = false;
@@ -358,6 +362,10 @@ public class Settings : MonoBehaviour
         SceneHandler.sceneActive[23] = SO2;
         SceneHandler.sceneActive[24] = GNG;
         SceneHandler.sceneActive[25] = WIS;
+
+
+        //Always keep this last and update the index/number so that Bender is given at end as an activity
+        SceneHandler.sceneActive[27] = BG;
 
         // TODO: start inside if to check internet
         if (InternetAvailable.internetAvailableStatic)

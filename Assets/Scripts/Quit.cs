@@ -69,8 +69,13 @@ public class Quit : MonoBehaviour {
         {
             OutputHandler.timer.Reset();
             if (!SceneManager.GetActiveScene().name.Equals("ending"))
+            {
                 SQLHandler.UpdateTest(6);
-            SceneHandler.GoToNextScene();
+                SceneHandler.GoToNextScene();
+            } else
+            {
+                SceneHandler.GoToNextScene();
+            }
         }
 
         //ScreenResolutionHandler.SetCurrentResolution();

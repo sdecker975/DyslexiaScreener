@@ -36,7 +36,7 @@ public class ServerConnection : MonoBehaviour {
             connThread.Start();
         }
         
-		if(SQLHandler.state)
+		if(SQLHandler.state && Application.internetReachability != NetworkReachability.NotReachable)
         {
             //Color c = new Color();
             //c.a = 0f;
